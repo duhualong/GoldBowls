@@ -21,4 +21,13 @@
     <item name="input_password_affirm" type="id" />
     <item name="line_input_password_affirm" type="id" />
     <item name="checkbox_password_affirm" type="id" />
+    <item name="bt_register" type="id" />
+    <item name="tv_register_two" type="id" />
+    <item name="tv_register_one" type="id" />
+    <item name="checkbox_user_agreement" type="id" />
+    <item name="line_input_real_name" type="id" />
+    <item name="input_real_name" type="id" />
+    <item name="line_input_identity_card" type="id" />
+    <item name="input_identity_card" type="id" />
+    <item name="bt_submit" type="id" />
 </resources>

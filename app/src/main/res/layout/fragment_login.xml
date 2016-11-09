@@ -51,6 +51,7 @@
             android:layout_marginLeft="@dimen/space.very_small"
             android:layout_marginStart="@dimen/space.very_small"
             android:inputType="phone"
+            android:textColorHint="@color/gray"
             android:hint="@string/et_input_phone_hint"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
@@ -78,6 +79,7 @@
             android:hint="@string/et_input_password_hint"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
+            android:textColorHint="@color/gray"
             android:maxLength="25"/>
         <CheckBox
             android:id="@id/checkbox_password"

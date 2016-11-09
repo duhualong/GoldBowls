@@ -19,6 +19,7 @@
             android:layout_marginLeft="@dimen/space.very_small"
             android:layout_marginStart="@dimen/space.very_small"
             android:inputType="phone"
+            android:textColorHint="@color/gray"
             android:hint="@string/et_input_phone_hint"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
@@ -46,6 +47,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
             android:hint="@string/et_input_code_hint"
+            android:textColorHint="@color/gray"
             android:maxLength="6"/>
         <View
             android:layout_width="1dp"
@@ -88,6 +90,7 @@
             android:hint="@string/et_input_password_hint"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
+            android:textColorHint="@color/gray"
             android:maxLength="25"/>
         <CheckBox
             android:id="@id/checkbox_password"
@@ -106,11 +109,7 @@
         android:id="@id/line_input_password_affirm"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_height"
-        android:layout_marginLeft="@dimen/space.medium"
-        android:layout_marginRight="@dimen/space.medium"
-        android:layout_marginEnd="@dimen/space.medium"
-        android:layout_marginStart="@dimen/space.medium"
-        android:layout_marginTop="@dimen/space.medium"
+        android:layout_margin="@dimen/space.medium"
         android:orientation="horizontal"
         android:background="@drawable/bg_round_shallow_gray_input">
         <EditText
@@ -124,6 +123,7 @@
             android:hint="@string/et_affirm_login_password_hint"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
+            android:textColorHint="@color/gray"
             android:maxLength="25"/>
         <CheckBox
             android:id="@id/checkbox_password_affirm"
@@ -137,8 +137,60 @@
             android:layout_marginRight="@dimen/space.small"
             android:background="@drawable/checkbox_style"/>
 
-
     </LinearLayout>
+    <Button
+        android:id="@id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/space.medium"
+        android:text="@string/bt_register"
+        android:background="@drawable/bg_round_color_primary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/tint_color"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space.medium"
+        android:layout_marginRight="@dimen/space.medium">
+        <TextView
+            android:id="@id/tv_register_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/tv_user_agreement_two"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_register_two"
+            android:layout_toStartOf="@id/tv_register_two"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/tint_color"
+            android:text="@string/tv_user_agreement_one"
+            android:layout_centerVertical="true"
+            android:id="@id/tv_register_one"/>
+        <CheckBox
+            android:id="@id/checkbox_user_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/tv_register_one"
+            android:layout_toLeftOf="@id/tv_register_one"
+            android:layout_marginRight="@dimen/space.very_small"
+            android:layout_marginEnd="@dimen/space.very_small"
+            android:background="@drawable/checkbox_agreement_style"/>
+
+
+
+    </RelativeLayout>
+
+
 
 
 </LinearLayout>

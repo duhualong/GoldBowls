@@ -18,6 +18,13 @@
     <string name="bt_register">注册</string>
     <string name="tv_user_agreement_one">我已阅读并同意</string>
     <string name="tv_user_agreement_two">《用户协议》</string>
+    <string name="et_input_real_name_hint">请输入真实姓名</string>
+    <string name="et_input_identity_card_hint">请输入身份证号码</string>
+    <string name="bt_submit">提交</string>
+    <string name="tv_correct_information_one">（请输入正确信息以免影响</string>
+    <string name="tv_correct_information_two">资金托管账户申请</string>
+    <string name="tv_correct_information_three">等功能）</string>
+
 
 
 
