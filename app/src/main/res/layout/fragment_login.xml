@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:background="@color/colorPrimary"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_login"
+        android:textColor="@color/tint_color"
+        android:layout_centerInParent="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_back_black_left"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/space.small"
+    />
+</RelativeLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_logo"
+        android:layout_marginTop="@dimen/space.medium_normal"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space.medium"
+        android:src="@drawable/ic_app_title"/>
+    <LinearLayout
+        android:id="@id/line_input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/space.medium"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_round_shallow_gray_input">
+        <EditText
+            android:id="@id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space.very_small"
+            android:layout_marginStart="@dimen/space.very_small"
+            android:inputType="phone"
+            android:maxLength="11"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

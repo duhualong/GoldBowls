@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--登陆模块-->
+    <item name="fragment_login_container" type="id" />
+    <item name="line_input_phone" type="id" />
+    <item name="input_phone" type="id" />
+</resources>
