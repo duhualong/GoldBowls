@@ -1,10 +1,24 @@
 <resources>
     <string name="app_name">金饭碗</string>
 
-    <!--登陆-->
+    <!--登陆注册忘记密码-->
     <string name="tv_login">登录</string>
-    <string name="et_input_phone_hint">请输入手机号</string>
+    <string name="et_input_phone_hint">请输入手机号码</string>
     <string name="et_input_password_hint">请输入密码</string>
     <string name="tv_forget_password">忘记密码</string>
     <string name="tv_register_now">立即注册</string>
+    <string name="tv_user_register">用户注册</string>
+    <string name="tv_input_information">1输入信息</string>
+    <string name="tv_authentication">2身份验证</string>
+    <string name="tv_register_success">3注册成功</string>
+    <string name="bt_verify_code">验证码发送</string>
+    <string name="et_input_code_hint">请输入验证码</string>
+    <string name="et_set_login_password_hint">请设置登录密码</string>
+    <string name="et_affirm_login_password_hint">请再次确认登陆密码</string>
+    <string name="bt_register">注册</string>
+    <string name="tv_user_agreement_one">我已阅读并同意</string>
+    <string name="tv_user_agreement_two">《用户协议》</string>
+
+
+
 </resources>

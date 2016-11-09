@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--登陆模块-->
+    <!--登陆注册忘记密码-->
     <item name="fragment_login_container" type="id" />
     <item name="line_input_phone" type="id" />
     <item name="input_phone" type="id" />
+    <item name="line_input_password" type="id" />
+    <item name="input_password" type="id" />
+    <item name="checkbox_password" type="id" />
+    <item name="btn_login" type="id" />
+    <item name="tv_forget_password" type="id" />
+    <item name="tv_register_now" type="id" />
+    <item name="back_left" type="id" />
+    <item name="tv_register_title" type="id" />
+    <item name="tv_input_information" type="id" />
+    <item name="tv_register_success" type="id" />
+    <item name="tv_authentication" type="id" />
+    <item name="line_input_code" type="id" />
+    <item name="bt_send_code" type="id" />
+    <item name="input_code" type="id" />
+    <item name="input_password_affirm" type="id" />
+    <item name="line_input_password_affirm" type="id" />
+    <item name="checkbox_password_affirm" type="id" />
 </resources>

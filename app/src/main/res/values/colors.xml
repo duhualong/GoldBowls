@@ -11,6 +11,7 @@
     <color name="deep_purple">#673AB7</color>
     <color name="indigo">#3F51B5</color>
     <color name="blue">#2196f3</color>
+    <color name="tint_blue">#80BAFF</color>
     <color name="blue_light">#03A9F4</color>
     <color name="cyan">#00BCD4</color>
     <color name="teal">#009688</color>
@@ -23,8 +24,10 @@
     <color name="deep_orange">#FF5722</color>
     <color name="brown">#795548</color>
     <color name="gray">#9E9E9E</color>
+    <color name="gray_deep">#999999</color>
     <color name="tint_gray">#DDDDDD</color>
     <color name="gray_light">#d4d2d2</color>
+    <color name="gray_middle">#F0F0F0</color>
     <color name="blue_gray">#607D8B</color>
     <color name="black">#000000</color>
     <color name="tint_color">#121212</color>
