@@ -1,11 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
-    <include layout="@layout/include_actionbar_register"/>
+    <include layout="@layout/include_actionbar_register" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_gray">
+
+                <ImageView
+                    android:id="@id/img_upload_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/space.medium_normal"
+                    android:src="@drawable/ic_identity_card_front" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_upload_front"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/space.medium_normal"
+                    android:layout_marginTop="@dimen/space.medium"
+                    android:text="@string/tv_upload_front"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_round_gray">
+
+                <ImageView
+                    android:id="@id/img_upload_reverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/space.medium_normal"
+                    android:src="@drawable/ic_identity_card_front" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_upload_reverse"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/space.medium_normal"
+                    android:layout_marginTop="@dimen/space.medium"
+                    android:text="@string/tv_upload_reverse"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/space.medium_normal">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="#DDDDDD" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#DDDDDD" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#DDDDDD" />
+
+                <View
+                    android:id="@id/view_one"
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#DDDDDD" />
+
+                <TextView
+                    android:id="@id/tv_photo_sample"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space.small"
+                    android:layout_marginStart="@dimen/space.small"
+                    android:layout_toEndOf="@id/view_one"
+                    android:layout_toRightOf="@id/view_one"
+                    android:text="拍摄示例"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#DDDDDD" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/space.small"
+                    android:layout_marginStart="@dimen/space.small"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/tv_photo_sample"
+                    android:layout_toRightOf="@id/tv_photo_sample"
+                    android:background="#DDDDDD" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/space.small"
+                    android:src="@drawable/ic_photo_style" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_margin="@dimen/space.small"
+                android:background="@drawable/bg_round_color_primary"
+                android:text="@string/bt_upload_identity_photo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/tint_color" />
+
+            <TextView
+                android:id="@id/tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#121212"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="@string/tv_skip"
+                android:drawableRight="@drawable/ic_skip"
+                android:drawableEnd="@drawable/ic_skip"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/space.small"
+                android:layout_marginRight="@dimen/space.small"
+                android:layout_marginTop="@dimen/space.small"
+                android:layout_marginBottom="@dimen/space.medium"
+                android:layout_gravity="end|right" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

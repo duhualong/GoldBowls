@@ -61,19 +61,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_correct_information_one"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp"
             android:textColor="@color/tint_color"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_correct_information_two"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp"
             android:textColor="@color/colorPrimary"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_correct_information_three"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp"
             android:textColor="@color/tint_color"/>
     </LinearLayout>
     <Button

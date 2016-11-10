@@ -24,8 +24,15 @@
     <string name="tv_correct_information_one">（请输入正确信息以免影响</string>
     <string name="tv_correct_information_two">资金托管账户申请</string>
     <string name="tv_correct_information_three">等功能）</string>
-
-
+    <string name="tv_upload_front">请上传身份证正面</string>
+    <string name="tv_upload_reverse">请上传身份证反面</string>
+    <string name="tv_identity_verify">身份认证</string>
+    <string name="tv_photo_sample">拍照示例</string>
+    <string name="bt_upload_identity_photo">上传身份证照片</string>
+    <string name="tv_skip">跳过</string>
+    <string name="bt_get_code">获取验证码</string>
+    <string name="bt_affirm">确认</string>
+    <string name="bt_next">下一步</string>
 
 
 </resources>

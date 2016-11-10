@@ -30,4 +30,10 @@
     <item name="line_input_identity_card" type="id" />
     <item name="input_identity_card" type="id" />
     <item name="bt_submit" type="id" />
+    <item name="img_upload_front" type="id" />
+    <item name="img_upload_reverse" type="id" />
+    <item name="view_one" type="id" />
+    <item name="tv_photo_sample" type="id" />
+    <item name="tv_skip" type="id" />
+    <item name="et_input_code" type="id" />
 </resources>
