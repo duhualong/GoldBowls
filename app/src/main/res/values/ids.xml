@@ -36,4 +36,8 @@
     <item name="tv_photo_sample" type="id" />
     <item name="tv_skip" type="id" />
     <item name="et_input_code" type="id" />
+    <item name="tv_home" type="id" />
+    <item name="tv_money" type="id" />
+    <item name="tv_code" type="id" />
+    <item name="tv_my" type="id" />
 </resources>

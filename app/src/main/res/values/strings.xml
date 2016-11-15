@@ -34,5 +34,37 @@
     <string name="bt_affirm">确认</string>
     <string name="bt_next">下一步</string>
 
+    <!--个人中心-->
+    <string name="tv_login_out">注销</string>
+    <string name="tv_sign_in">签到</string>
+    <string name="tv_accumulated_income_total">累计总收入（元）</string>
+    <string name="tv_available_balance">可用余额（元）</string>
+    <string name="tv_withdrawal_amount">可提现金（元）</string>
+    <string name="tv_investment_freeze">投资冻结（元）</string>
+    <string name="tv_recharge">充值</string>
+    <string name="tv_withdraw">提现</string>
+    <string name="tv_trading_record">交易记录</string>
+    <string name="tv_cash_red_packet">现金红包</string>
+    <string name="tv_investment_record">投资记录</string>
+    <string name="tv_experience_gold_investment">体验金投资</string>
+    <string name="tv_my_code">我的积分</string>
+    <string name="tv_invite_to_share">邀请分享</string>
+    <string name="tv_certification">实名认证</string>
+    <string name="tv_bind_phone">绑定手机</string>
+    <string name="tv_account_security">账户安全</string>
+    <string name="tv_shipping_address">收货地址</string>
+    <string name="tv_bank_card_management">银行卡管理</string>
+    <string name="tv_center_activity">活动中心</string>
+    <string name="tv_help_center">帮助中心</string>
+    <string name="tv_my_customer_service">我的客服</string>
+    
+    
+    <!--底部文字-->
+    <string name="tv_home">首页</string>
+    <string name="tv_money">赚钱</string>
+    <string name="tv_code">积分</string>
+    <string name="tv_my">我的</string>
+    
+
 
 </resources>
