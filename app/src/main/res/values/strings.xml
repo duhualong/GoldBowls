@@ -41,6 +41,7 @@
     <string name="tv_available_balance">可用余额（元）</string>
     <string name="tv_withdrawal_amount">可提现金（元）</string>
     <string name="tv_investment_freeze">投资冻结（元）</string>
+    <string name="tv_money_data">0.00</string>
     <string name="tv_recharge">充值</string>
     <string name="tv_withdraw">提现</string>
     <string name="tv_trading_record">交易记录</string>

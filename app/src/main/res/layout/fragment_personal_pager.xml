@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/include_bottom"/>
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space.small"
+        android:background="@color/colorPrimary">
+<TextView
+    android:id="@id/tv_login_out"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:layout_centerVertical="true"
+    android:padding="@dimen/space.very_small"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:text="@string/tv_login_out"/>
+        <TextView
+            android:id="@id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="你好，18817772486"/>
+        <ImageView
+            android:id="@id/img_push_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/space.very_small"
+            android:layout_marginRight="@dimen/space.very_small"
+            android:src="@drawable/ic_push_notification"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/ic_personal_center_background">
+
+        <TextView
+            android:id="@id/tv_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/space.small"
+            android:layout_marginRight="@dimen/space.small"
+            android:padding="@dimen/space.very_small"
+            android:drawableTop="@drawable/ic_sign_in"
+            android:drawablePadding="@dimen/space.small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/tv_sign_in"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@id/personal_center_avatar"
+            android:layout_width="@dimen/heard_profit_height"
+            android:layout_height="@dimen/heard_profit_height"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_head_profit" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_accumulated_income_total"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_below="@id/personal_center_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space.very_small"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:id="@id/tv_accumulated_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:textSize="30sp"
+            android:textColor="@color/white"
+            android:text="@string/tv_money_data"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/space.very_small"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_accumulated_income"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space.very_small"
+                    android:text="@string/tv_available_balance"/>
+                <TextView
+                    android:id="@id/tv_available_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_money_data"
+                    android:layout_marginTop="@dimen/space.small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space.very_small"
+                    android:text="@string/tv_withdrawal_amount"/>
+                <TextView
+                    android:id="@id/tv_withdrawal_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_money_data"
+                    android:layout_marginTop="@dimen/space.small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+            </LinearLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space.very_small"
+                    android:text="@string/tv_investment_freeze"/>
+                <TextView
+                    android:id="@id/tv_freeze_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_money_data"
+                    android:layout_marginTop="@dimen/space.small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <include layout="@layout/include_personal_content"/>
+
+
+           </LinearLayout>
+       </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

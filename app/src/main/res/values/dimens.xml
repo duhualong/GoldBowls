@@ -17,4 +17,6 @@
     <dimen name="button_height">55dp</dimen>
     <dimen name="button_height_normal">50dp</dimen>
 
+    <dimen name="heard_profit_height">96dp</dimen>
+
 </resources>

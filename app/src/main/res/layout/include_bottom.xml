@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="75dp"
     android:layout_alignParentBottom="true"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +26,7 @@
             android:text="@string/tv_home"
             android:drawablePadding="@dimen/space.small"
             android:gravity="center"
-            android:padding="@dimen/space.small"
+            android:padding="@dimen/space.very_small"
             android:textColor="@color/gray_deep"
             android:layout_weight="1"/>
         <TextView
@@ -36,7 +37,7 @@
         android:text="@string/tv_money"
         android:drawablePadding="@dimen/space.small"
         android:gravity="center"
-        android:padding="@dimen/space.small"
+        android:padding="@dimen/space.very_small"
         android:textColor="@color/gray_deep"
         android:layout_weight="1"/>
         <TextView
@@ -47,7 +48,7 @@
             android:text="@string/tv_code"
             android:drawablePadding="@dimen/space.small"
             android:gravity="center"
-            android:padding="@dimen/space.small"
+            android:padding="@dimen/space.very_small"
             android:textColor="@color/gray_deep"
             android:layout_weight="1"/>
         <TextView
@@ -58,7 +59,7 @@
             android:text="@string/tv_my"
             android:drawablePadding="@dimen/space.small"
             android:gravity="center"
-            android:padding="@dimen/space.small"
+            android:padding="@dimen/space.very_small"
             android:textColor="@color/gray_deep"
             android:layout_weight="1"/>
     </LinearLayout>

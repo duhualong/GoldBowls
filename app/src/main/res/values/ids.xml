@@ -36,8 +36,42 @@
     <item name="tv_photo_sample" type="id" />
     <item name="tv_skip" type="id" />
     <item name="et_input_code" type="id" />
+    <!--底部4个控件-->
     <item name="tv_home" type="id" />
     <item name="tv_money" type="id" />
     <item name="tv_code" type="id" />
     <item name="tv_my" type="id" />
+    <!--个人中心-->
+    <item name="tv_login_out" type="id" />
+    <item name="img_push_notification" type="id" />
+    <item name="tv_account" type="id" />
+    <item name="tv_sign_in" type="id" />
+    <item name="personal_center_avatar" type="id" />
+    <item name="tv_accumulated_income" type="id" />
+    <item name="tv_available_money" type="id" />
+    <item name="tv_withdrawal_cash" type="id" />
+    <item name="tv_freeze_cash" type="id" />
+    <item name="tv_recharge" type="id" />
+    <item name="tv_withdraw" type="id" />
+    <item name="tv_trading_record" type="id" />
+    <item name="img_red_packet" type="id" />
+    <item name="btn_red_packet" type="id" />
+    <item name="rl_red_packet" type="id" />
+    <item name="rl_investment" type="id" />
+    <item name="tv_experience_gold" type="id" />
+    <item name="tv_my_code" type="id" />
+    <item name="img_investment" type="id" />
+    <item name="rl_my_code" type="id" />
+    <item name="rl_experience" type="id" />
+    <item name="rl_invite" type="id" />
+    <item name="rl_certification" type="id" />
+    <item name="rl_bind" type="id" />
+    <item name="rl_account" type="id" />
+    <item name="rl_address" type="id" />
+    <item name="rl_bank" type="id" />
+    <item name="rl_activity" type="id" />
+    <item name="rl_help" type="id" />
+    <item name="rl_customer" type="id" />
+    <item name="root_container" type="id" />
+    <item name="fragment_container" type="id" />
 </resources>

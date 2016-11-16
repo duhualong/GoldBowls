@@ -26,4 +26,11 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.0'
     testCompile 'junit:junit:4.12'
+//
+//    // Facebook
+//    compile "com.facebook.fresco:fresco:$rootProject.frescoVersion"
+//    compile "com.facebook.stetho:stetho:${stethoVersion}"
+//    compile "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
+
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 }

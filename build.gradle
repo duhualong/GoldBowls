@@ -21,3 +21,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext{
+    // Facebook
+    frescoVersion = '0.11.0'
+    stethoVersion = "1.3.1"
+}
