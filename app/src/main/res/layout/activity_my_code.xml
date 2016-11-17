@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black_left"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_my_code"
+            android:layout_centerInParent="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/tint_color"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_color_white"
+        android:layout_margin="@dimen/space.medium">
+        <TextView
+            android:id="@id/tv_total_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_total_code"
+            android:padding="@dimen/space.small"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gray_deep"/>
+        <TextView
+            android:id="@id/tv_code_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:padding="@dimen/space.small"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/tv_code_explain"
+            android:textColor="@color/gray_deep"/>
+        <TextView
+            android:id="@id/tv_code_number"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_below="@id/tv_total_code"
+            android:layout_marginLeft="@dimen/space.small"
+            android:layout_marginStart="@dimen/space.small"
+            android:textSize="20pt"
+
+            android:textColor="@color/orange_button"
+            android:text="@string/tv_code_number_count" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="@color/orange_button"
+            android:text="@string/tv_code_number"
+            android:layout_below="@id/tv_total_code"
+            android:layout_toRightOf="@id/tv_code_number"
+            android:layout_toEndOf="@id/tv_code_number"
+            android:gravity="bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tv_code_number"
+       android:layout_margin="@dimen/space.medium"
+       android:textColor="@color/tint_color"
+       android:text="@string/btn_code_exchange"
+       android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+       android:background="@drawable/bg_round_color_primary"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space.small"
+        android:padding="@dimen/space.medium"
+        android:textColor="@color/gray_deep"
+        android:background="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="@string/tv_recently_recode"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:fillViewport="true">
+    <ListView
+        android:id="@id/list_code_recode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        />
+    </ScrollView>
+
+</LinearLayout>

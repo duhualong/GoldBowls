@@ -65,6 +65,38 @@
     <string name="tv_money">赚钱</string>
     <string name="tv_code">积分</string>
     <string name="tv_my">我的</string>
+
+    <!--绑定手机更换-->
+    <string name="tv_warm_prompt">温馨提示：</string>
+    <string name="et_login_password">请输入登录密码</string>
+    <string name="tv_current_bind">当前绑定手机</string>
+    <string name="tv_phone_number">18817772486</string>
+    <string name="btn_change_bind">更换绑定</string>
+    <string name="tv_bind_tip">更换绑定手机号后，您的原来手机号码将被重置到未认证状态，再次登录请使用新手机号码，密码不变。</string>
+    <string name="tv_change_bind_phone">更换绑定手机</string>
+    <string name="et_change_bind_phone_hint">请输入更换要绑定的手机号</string>
+    <string name="btn_send_code">发送验证码</string>
+    <string name="btn_verification">去验证</string>
+
+    <!--账户安全-->
+    <string name="tv_login_password">登录密码</string>
+    <string name="tv_payment_password">支付密码</string>
+    <string name="tv_gesture_password">手势密码</string>
+    <string name="tv_set_gesture_password">设置手势密码</string>
+    
+    <!--我的积分-->
+    <string name="tv_total_code">总积分</string>
+    <string name="tv_code_explain">积分说明</string>
+    <string name="btn_code_exchange">积分兑换商品</string>
+    <string name="tv_recently_recode">最近30天积分记录</string>
+    <string name="tv_code_number">分</string>
+    <string name="tv_code_number_count">1000</string>
+    <string name="item_code_title_name">投资积分</string>
+    <string name="item_code_date_time">2016&#8211;10&#8211;12 10:00</string>
+    <string name="item_code_number">+222</string>
+
+
+    
     
 
 

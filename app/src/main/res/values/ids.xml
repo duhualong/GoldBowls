@@ -36,6 +36,7 @@
     <item name="tv_photo_sample" type="id" />
     <item name="tv_skip" type="id" />
     <item name="et_input_code" type="id" />
+    <item name="btn_get_code" type="id" />
     <!--底部4个控件-->
     <item name="tv_home" type="id" />
     <item name="tv_money" type="id" />
@@ -74,4 +75,26 @@
     <item name="rl_customer" type="id" />
     <item name="root_container" type="id" />
     <item name="fragment_container" type="id" />
+    <!--更改绑定手机号-->
+    <item name="btn_send_code" type="id" />
+    <item name="btn_checked" type="id" />
+    <item name="btn_change_bind" type="id" />
+    <item name="tv_phone_number" type="id" />
+    <!--账户安全-->
+    <item name="rl_login_password" type="id" />
+    <item name="rl_payment_password" type="id" />
+    <item name="rl_gesture_password" type="id" />
+    <item name="checkbox_set_password" type="id" />
+    <item name="rl_payment_set_password" type="id" />
+
+
+    <!--我的积分-->
+    <item name="tv_total_code" type="id" />
+    <item name="tv_code_explain" type="id" />
+    <item name="tv_code_number" type="id" />
+    <item name="list_code_recode" type="id" />
+    <item name="item_code_title" type="id" />
+    <item name="item_code_number" type="id" />
+    <item name="item_code_date" type="id" />
+
 </resources>

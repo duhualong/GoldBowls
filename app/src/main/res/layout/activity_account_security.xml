@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@id/back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.small"
+            android:src="@drawable/ic_back_black_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tv_account_security"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/tint_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rl_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space.medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_login_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/tint_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.very_small"
+            android:src="@drawable/ic_arrow_right_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rl_payment_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space.medium"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_payment_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/tint_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.very_small"
+            android:src="@drawable/ic_arrow_right_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/rl_gesture_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space.medium"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_gesture_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/tint_color" />
+
+        <CheckBox
+            android:id="@id/checkbox_set_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:button="@null"
+            android:background="@drawable/checkbox_set_password_style"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/rl_payment_set_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/space.medium"
+        android:layout_marginTop="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_set_gesture_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/tint_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.very_small"
+            android:src="@drawable/ic_arrow_right_gray" />
+    </RelativeLayout>
+</LinearLayout>
