@@ -36,5 +36,16 @@
             android:id="@id/tv_manage">
         </TextView>
     </RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/space.medium"
+    android:layout_marginBottom="@dimen/space.medium">
+    <ListView
+        android:id="@id/list_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </ListView>
+</ScrollView>
 </LinearLayout>
