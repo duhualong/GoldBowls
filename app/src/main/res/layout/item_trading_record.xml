@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space.medium"
+   android:background="@color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/item_trading_title"
+        android:text="@string/item_trading_title"
+        android:textColor="@color/tint_color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/item_trading_date"
+        android:layout_below="@id/item_trading_title"
+        android:text="@string/item_code_date_time"
+        android:textColor="@color/gray_deep"
+        android:layout_marginTop="@dimen/space.small"
+        />
+    <TextView
+        android:id="@id/item_trading_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/item_code_number"
+        android:textColor="@color/orange_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@id/item_trading_audit"
+    android:layout_below="@id/item_trading_code"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:text="@string/item_record_audit"
+    android:layout_marginTop="@dimen/space.small"
+    android:textColor="@color/green_deep"/>
+</RelativeLayout>

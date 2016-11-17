@@ -58,8 +58,8 @@
     <string name="tv_center_activity">活动中心</string>
     <string name="tv_help_center">帮助中心</string>
     <string name="tv_my_customer_service">我的客服</string>
-    
-    
+
+
     <!--底部文字-->
     <string name="tv_home">首页</string>
     <string name="tv_money">赚钱</string>
@@ -83,7 +83,12 @@
     <string name="tv_payment_password">支付密码</string>
     <string name="tv_gesture_password">手势密码</string>
     <string name="tv_set_gesture_password">设置手势密码</string>
-    
+    <!--设置支付密码-->
+    <string name="tv_set_payment_password">设置支付密码</string>
+    <string name="tv_affirm_payment_password">确认支付密码</string>
+    <string name="et_input_payment_password_hint">请输入6位支付密码</string>
+    <string name="et_affirm_input_password_payment_hint">请再次输入支付密码</string>
+
     <!--我的积分-->
     <string name="tv_total_code">总积分</string>
     <string name="tv_code_explain">积分说明</string>
@@ -95,7 +100,28 @@
     <string name="item_code_date_time">2016&#8211;10&#8211;12 10:00</string>
     <string name="item_code_number">+222</string>
 
+    <!--交易记录-->
+    <string name="item_trading_title">投资项目（订单号2015122010）</string>
+    <string name="item_record_audit">正在审核中</string>
 
+    <!--收货地址-->
+    <string name="tv_manage">管理</string>
+    <string name="tv_cancel">取消</string>
+    <string name="tv_address_name">东方不败</string>
+    <string name="tv_address_phone">18717893534</string>
+    <string name="tv_address_detail">上海市闸北区上海南站无名路78号4栋103室</string>
+    <string name="tv_contact">联系人</string>
+    <string name="tv_accept_linkman">收货人：</string>
+    <string name="et_accept_linkman_hint">请填写收货人的姓名</string>
+    <string name="tv_accept_phone">手机号：</string>
+    <string name="et_accept_phone_hint">请填写收货人的手机号码</string>
+    <string name="tv_edifice_address">小区/大厦/学校:</string>
+    <string name="et_baidu_search">点击选择</string>
+    <string name="tv_house_number">楼号-门牌号：</string>
+    <string name="et_example_house_number">例16号楼403室</string>
+    <string name="btn_address_finished">完成</string>
+    <string name="tv_province_city">省/市/区/县：</string>
+    <string name="tv_address_province">请选择地区</string>
     
     
 
