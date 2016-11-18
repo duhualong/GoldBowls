@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black_left"
+            android:layout_centerVertical="true"
+            android:id="@id/back_left"
+            android:padding="@dimen/space.small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tint_color"
+            android:text="@string/tv_experience_gold_investment"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

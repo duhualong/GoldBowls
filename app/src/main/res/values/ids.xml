@@ -124,5 +124,10 @@
     <item name="item_address_linkman_phone" type="id" />
     <item name="img_address_delete" type="id" />
     <item name="img_address_edit" type="id" />
+    <!--绑定银行卡-->
+    <item name="tv_bank_account_name" type="id" />
+    <item name="et_bank_account" type="id" />
+    <item name="tv_identity_card_number" type="id" />
+    <item name="tv_bank_account_type" type="id" />
 
 </resources>

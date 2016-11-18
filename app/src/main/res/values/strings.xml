@@ -122,6 +122,24 @@
     <string name="btn_address_finished">完成</string>
     <string name="tv_province_city">省/市/区/县：</string>
     <string name="tv_address_province">请选择地区</string>
+
+    <!--绑定银行卡-->
+    <string name="tv_bind_bank">绑定银行卡</string>
+    <string name="tv_name_hint">姓名</string>
+    <string name="tv_name">杜**</string>
+    <string name="tv_identity_card_number_hint">身份证号</string>
+    <string name="tv_identity_card_number">312584***4525</string>
+    <string name="tv_identification">认证后不可修改</string>
+    <string name="tv_select_bank_card_hint">请选择您的银行卡</string>
+    <string name="tv_selected_bank_name">工商银行</string>
+    <string name="et_Input_bank_card_number_hint">请输入银行卡号</string>
+    <string name="tv_credit_card">不支持信用卡</string>
+
+    <!--体验金投资-->
+    <string name="tv_experience_new">新手体验金理财产品</string>
+    <string name="btn_immediate_investment">立即投资</string>
+    <string name="tv_annual_earning"></string>
+    
     
     
 

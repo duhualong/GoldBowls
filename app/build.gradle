@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "haowei.computer.goldbowl"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -33,4 +33,6 @@ dependencies {
 //    compile "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
 
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    //圆弧进度条
+    compile 'com.czp.arcProgressBar:ArcProgressBar:1.0.1'
 }
