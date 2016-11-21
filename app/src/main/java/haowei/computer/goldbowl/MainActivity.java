@@ -32,7 +32,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
     }
-
     public void backgroundAlpha(float bgAlpha) {
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         lp.alpha = bgAlpha; //0.0-1.0
