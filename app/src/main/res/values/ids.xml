@@ -129,5 +129,18 @@
     <item name="et_bank_account" type="id" />
     <item name="tv_identity_card_number" type="id" />
     <item name="tv_bank_account_type" type="id" />
+    <!--体验金-->
+    <item name="tv_experience_new_player" type="id" />
+    <item name="img_circle_gold" type="id" />
+    <item name="tv_annual_experience" type="id" />
+    <item name="tv_annual_experience_rate" type="id" />
+    <item name="tv_deadline_investment" type="id" />
+    <item name="tv_investment_amount" type="id" />
+    <item name="rl_investment_amount" type="id" />
+    <item name="tv_anticipated_income_money" type="id" />
+    <item name="tv_experience_gold_money" type="id" />
+    <item name="rl_investment_content" type="id" />
+    <item name="btn_immediate_investment" type="id" />
+
 
 </resources>

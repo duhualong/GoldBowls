@@ -1,29 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_white">
+    android:background="@color/light_white"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:background="@color/colorPrimary">
+
         <ImageView
+            android:id="@id/back_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_black_left"
             android:layout_centerVertical="true"
-            android:id="@id/back_left"
-            android:padding="@dimen/space.small"/>
+            android:padding="@dimen/space.small"
+            android:src="@drawable/ic_back_black_left" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/tint_color"
+            android:layout_centerInParent="true"
             android:text="@string/tv_experience_gold_investment"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:layout_centerInParent="true"/>
+            android:textColor="@color/tint_color" />
 
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space.medium"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@id/tv_experience_new_player"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.medium"
+            android:text="@string/tv_experience_new"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/tint_color" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_experience_money" />
+
+        <RelativeLayout
+            android:id="@id/rl_investment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_experience_new_player">
+
+            <TextView
+                android:id="@id/tv_annual_experience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space.large"
+                android:text="@string/tv_annual_earning"
+                android:textColor="@color/tint_color" />
+
+            <TextView
+                android:id="@id/tv_annual_experience_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_annual_experience"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space.small"
+                android:text="@string/tv_annual_earning_rate"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:id="@id/view_one"
+                android:layout_width="180dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_annual_experience_rate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space.medium"
+                android:background="@color/tint_gray" />
+
+            <RelativeLayout
+                android:id="@id/rl_investment"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_one"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/space.medium">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_investment_deadline"
+                        android:textColor="@color/tint_color" />
+
+                    <TextView
+                        android:id="@id/tv_deadline_investment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space.small"
+                        android:text="@string/tv_deadline_day"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_investment_amount"
+                        android:textColor="@color/tint_color" />
+
+                    <TextView
+                        android:id="@id/tv_investment_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space.small"
+                        android:text="@string/tv_investment_amount_money"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@id/img_circle_gold"
+                android:layout_width="240dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_circle_gold_select" />
+
+            <LinearLayout
+                android:id="@id/rl_investment_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@id/rl_investment"
+                android:layout_marginTop="@dimen/space.medium"
+
+                android:layout_centerHorizontal="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_experience_gold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+
+                <TextView
+                    android:id="@id/tv_experience_gold_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space.very_small"
+                    android:layout_marginStart="@dimen/space.very_small"
+                    android:layout_marginRight="@dimen/space.very_small"
+                    android:layout_marginEnd="@dimen/space.very_small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/tv_experience_gold_money"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_currency_symbol"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/space.medium"
+
+
+                android:layout_below="@id/rl_investment_amount"
+                android:layout_marginTop="@dimen/space.very_small"
+                android:layout_centerHorizontal="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_anticipated_income"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+
+                <TextView
+                    android:id="@id/tv_anticipated_income_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space.very_small"
+                    android:layout_marginStart="@dimen/space.very_small"
+                    android:layout_marginRight="@dimen/space.very_small"
+                    android:layout_marginEnd="@dimen/space.very_small"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/tv_anticipated_income_money"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_currency_symbol"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/tint_color" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+<Button
+    android:id="@id/btn_immediate_investment"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/button_height"
+    android:layout_margin="@dimen/space.medium"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:textColor="@color/tint_color"
+    android:text="@string/btn_immediate_investment"
+    android:background="@drawable/bg_round_color_primary"
+    android:layout_below="@id/rl_investment_content"/>
+        <!--<ImageView-->
+        <!--android:id="@id/img_circle_gold"-->
+        <!--android:layout_width="240dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@id/tv_experience_new_player"-->
+        <!--android:src="@drawable/ic_circle_gold_select"/>-->
+
+    </RelativeLayout>
 </LinearLayout>

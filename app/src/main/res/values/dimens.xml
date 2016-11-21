@@ -10,6 +10,7 @@
     <dimen name="space.medium">16dp</dimen>
     <dimen name="space.medium_normal">24dp</dimen>
     <dimen name="space.small">8dp</dimen>
+    <dimen name="space.smaller">5dp</dimen>
     <dimen name="space.small_middle">10dp</dimen>
     <dimen name="space.very_small">4dp</dimen>
     <dimen name="space.divider">1dp</dimen>

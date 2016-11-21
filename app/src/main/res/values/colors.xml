@@ -13,9 +13,11 @@
 
     <color name="red_dark">#f21a0b</color>
     <color name="pink">#E91E63</color>
+    <color name="deep_pink">#F76F95</color>
     <color name="purple">#9C27B0</color>
     <color name="deep_purple">#673AB7</color>
     <color name="indigo">#3F51B5</color>
+    <color name="violet">#917DDE</color>
     <color name="blue">#2196f3</color>
     <color name="tint_blue">#80BAFF</color>
     <color name="blue_light">#03A9F4</color>

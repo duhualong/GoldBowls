@@ -134,11 +134,38 @@
     <string name="tv_selected_bank_name">工商银行</string>
     <string name="et_Input_bank_card_number_hint">请输入银行卡号</string>
     <string name="tv_credit_card">不支持信用卡</string>
+    <string name="tv_credit_cards">*不支持信用卡gdfdhhf让他发广告花费话费刚好符合规范借记卡ujuduuuu</string>
 
     <!--体验金投资-->
     <string name="tv_experience_new">新手体验金理财产品</string>
     <string name="btn_immediate_investment">立即投资</string>
-    <string name="tv_annual_earning"></string>
+    <string name="tv_annual_earning">年化收益</string>
+    <string name="tv_annual_earning_rate">15.00%</string>
+    <string name="tv_investment_deadline">投资期限</string>
+    <string name="tv_investment_amount">投资总额</string>
+    <string name="tv_anticipated_income">预计收益</string>
+    <string name="tv_experience_gold">您有体验金</string>
+    <string name="tv_currency_symbol">元</string>
+    <string name="tv_investment_amount_money">20万</string>
+    <string name="tv_deadline_day">5天</string>
+    <string name="tv_experience_gold_money">20000</string>
+    <string name="tv_anticipated_income_money">300</string>
+    
+    <!--我的红包-->
+    <string name="tv_my_red_packet">我的红包</string>
+    <string name="tv_all">全部</string>
+    <string name="tv_rate_coupon">加息券</string>
+    <string name="tv_experience_gold_coupon">体验金</string>
+    <string name="tv_coupon_deadline_time">到期时间：</string>
+    <string name="tv_coupon_item_use_lowest_money">单笔投资金额满</string>
+    <string name="tv_coupon_item_money">1000</string>
+    <string name="tv_coupon_item_tip">元时使用，收益率在现有收益上累加</string>
+    <string name="tv_coupon_out_date">已过期</string>
+    <string name="tv_coupon_used">已使用</string>
+    <string name="tv_coupon_symbol">+</string>
+    <string name="tv_coupon_money_rate">1.5%</string>
+
+    
     
     
     
