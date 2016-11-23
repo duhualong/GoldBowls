@@ -12,5 +12,14 @@
     android:layout_centerInParent="true"
     android:textAppearance="@style/TextAppearance.AppCompat.Title"
     android:text="测试popwindows"/>
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/tint_gray"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/space.medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Realm Data"/>
 
 </RelativeLayout>

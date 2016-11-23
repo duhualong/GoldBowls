@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
@@ -35,4 +36,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.0.0'
     //圆弧进度条
     compile 'com.czp.arcProgressBar:ArcProgressBar:1.0.1'
+
+
 }

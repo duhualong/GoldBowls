@@ -141,6 +141,12 @@
     <item name="tv_experience_gold_money" type="id" />
     <item name="rl_investment_content" type="id" />
     <item name="btn_immediate_investment" type="id" />
+    <!--我的红包-->
+    <item name="item_coupon_symbol" type="id" />
+    <item name="item_coupon_symbol_content" type="id" />
+    <item name="item_coupon_tip_first" type="id" />
+    <item name="item_coupon_tip_second" type="id" />
+    <item name="item_coupon_tip_third" type="id" />
 
 
 </resources>

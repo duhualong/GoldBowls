@@ -7,5 +7,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="style0">
+        <item name="android:textSize">19dip</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
+    <style name="style1">
+        <item name="android:textSize">23dip</item>
+        <item name="android:textColor">@color/deep_pink</item>
+        <item name="android:textStyle">italic</item>
+    </style>
 </resources>

@@ -157,9 +157,10 @@
     <string name="tv_rate_coupon">加息券</string>
     <string name="tv_experience_gold_coupon">体验金</string>
     <string name="tv_coupon_deadline_time">到期时间：</string>
-    <string name="tv_coupon_item_use_lowest_money">单笔投资金额满</string>
-    <string name="tv_coupon_item_money">1000</string>
-    <string name="tv_coupon_item_tip">元时使用，收益率在现有收益上累加</string>
+    <string name="tv_coupon_item_user_way">单笔投资金额满1000元时使用，收益率在现有收益上累加</string>
+    <!--<string name="tv_coupon_item_use_lowest_money">单笔投资金额满</string>-->
+    <!--<string name="tv_coupon_item_money">1000</string>-->
+    <!--<string name="tv_coupon_item_tip">元时使用，收益率在现有收益上累加</string>-->
     <string name="tv_coupon_out_date">已过期</string>
     <string name="tv_coupon_used">已使用</string>
     <string name="tv_coupon_symbol">+</string>
