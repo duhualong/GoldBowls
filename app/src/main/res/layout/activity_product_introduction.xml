@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/light_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@id/back_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black_left"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/space.small"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tint_color"
+            android:layout_centerInParent="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:text="@string/tv_product_introduction"/>
+    </RelativeLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="horizontal">
+      <TextView
+          android:id="@id/tv_investment_description"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:textColor="@color/gray_deep"
+          android:text="@string/tv_investment_description"
+          android:padding="@dimen/space.medium"
+          android:layout_height="wrap_content" />
+      <TextView
+          android:id="@id/tv_borrower_information"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:textColor="@color/gray_deep"
+          android:text="@string/tv_borrower_information"
+          android:padding="@dimen/space.medium"
+          android:layout_height="wrap_content" />
+      <TextView
+          android:id="@id/tv_investment_record"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:textColor="@color/gray_deep"
+          android:text="@string/tv_investment_record"
+          android:padding="@dimen/space.medium"
+          android:layout_height="wrap_content" />
+
+  </LinearLayout>
+    <FrameLayout
+        android:id="@id/fragment_investment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -157,19 +157,36 @@
     <string name="tv_rate_coupon">加息券</string>
     <string name="tv_experience_gold_coupon">体验金</string>
     <string name="tv_coupon_deadline_time">到期时间：</string>
+    <string name="tv_coupon_deadline_times">到期时间：2016.11.30</string>
     <string name="tv_coupon_item_user_way">单笔投资金额满1000元时使用，收益率在现有收益上累加</string>
-    <!--<string name="tv_coupon_item_use_lowest_money">单笔投资金额满</string>-->
-    <!--<string name="tv_coupon_item_money">1000</string>-->
-    <!--<string name="tv_coupon_item_tip">元时使用，收益率在现有收益上累加</string>-->
+    <string name="tv_coupon_item_use_lowest_money">单笔投资金额满</string>
+    <string name="tv_coupon_item_money">1000</string>
+    <string name="tv_coupon_item_tip">元时使用，收益率在现有收益上累加</string>
     <string name="tv_coupon_out_date">已过期</string>
     <string name="tv_coupon_used">已使用</string>
     <string name="tv_coupon_symbol">+</string>
     <string name="tv_coupon_money_rate">1.5%</string>
 
+    <!--产品介绍-->
+    <string name="tv_product_introduction">产品介绍</>
+    <string name="tv_investment_description">投资描述</string>
+    <string name="tv_borrower_information">借款者信息</string>
+    <string name="tv_purchase_time">购买期限</string>
+    <string name="tv_lock_deadline">锁定期限</string>
+    <string name="tv_join_condition">加入条件</string>
+    <string name="tv_purchase_limit">购买限制</string>
+    <string name="tv_refund_mode">还款方式</string>
+    <string name="tv_in_advance_redeem">提前赎回</string>
+    <string name="tv_start_time_end_time">2016&#8211;09&#8211;22至2016&#8211;10&#8211;23</string>
+    <string name="tv_join_condition_content">加入金额100元起，且以100元的倍数递增</string>
+    <string name="tv_purchase_limit_content">100元起投，单次投资上限2万元</string>
+    <string name="tv_refund_mode_content">到期还本利息</string>
+    <string name="tv_boole_in_advance_redeem">不支持提前赎回</string>
+
     
     
     
     
 
-
+tv
 </resources>

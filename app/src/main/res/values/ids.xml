@@ -147,6 +147,21 @@
     <item name="item_coupon_tip_first" type="id" />
     <item name="item_coupon_tip_second" type="id" />
     <item name="item_coupon_tip_third" type="id" />
+    <item name="item_coupon_type" type="id" />
+    <item name="item_coupon_expire_time" type="id" />
+    <item name="tv_all" type="id" />
+    <item name="tv_cash_red_packet" type="id" />
+    <item name="tv_rate_coupon" type="id" />
+    <!--产品介绍-->
+    <item name="tv_investment_description" type="id" />
+    <item name="tv_borrower_information" type="id" />
+    <item name="tv_investment_record" type="id" />
+    <item name="fragment_investment_container" type="id" />
+    <item name="tv_purchase_time_limit" type="id" />
+    <item name="tv_lock_deadline" type="id" />
+    <item name="tv_join_condition" type="id" />
+    <item name="tv_refund_mode" type="id" />
+    <item name="tv_advance_redeem" type="id" />
 
 
 </resources>
