@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
    >
-    <haowei.computer.goldbowl.PasswordView
+    <haowei.computer.goldbowl.test.PasswordView
         android:id="@+id/mPsdView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

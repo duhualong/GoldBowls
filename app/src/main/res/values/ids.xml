@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--导航页面-->
+    <item name="img_splash" type="id" />
     <!--登陆注册忘记密码-->
     <item name="fragment_login_container" type="id" />
     <item name="line_input_phone" type="id" />
@@ -153,6 +155,7 @@
     <item name="tv_cash_red_packet" type="id" />
     <item name="tv_rate_coupon" type="id" />
     <!--产品介绍-->
+    <item name="textView2" type="id"/>
     <item name="tv_investment_description" type="id" />
     <item name="tv_borrower_information" type="id" />
     <item name="tv_investment_record" type="id" />
@@ -162,6 +165,13 @@
     <item name="tv_join_condition" type="id" />
     <item name="tv_refund_mode" type="id" />
     <item name="tv_advance_redeem" type="id" />
+    <item name="webView" type="id" />
+    <item name="list_red_packet" type="id" />
+    <item name="item_investment_phone" type="id" />
+    <item name="item_investment_date" type="id" />
+    <item name="tv_investment_money" type="id" />
+    <item name="list_investment" type="id" />
+    <item name="progress_bar" type="id" />
 
 
 </resources>

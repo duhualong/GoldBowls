@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">金饭碗</string>
+    <string name="app_name">金饭碗理财</string>
 
     <!--登陆注册忘记密码-->
     <string name="tv_login">登录</string>
@@ -168,7 +168,7 @@
     <string name="tv_coupon_money_rate">1.5%</string>
 
     <!--产品介绍-->
-    <string name="tv_product_introduction">产品介绍</>
+    <string name="tv_product_introduction">产品介绍</string>
     <string name="tv_investment_description">投资描述</string>
     <string name="tv_borrower_information">借款者信息</string>
     <string name="tv_purchase_time">购买期限</string>
@@ -182,11 +182,17 @@
     <string name="tv_purchase_limit_content">100元起投，单次投资上限2万元</string>
     <string name="tv_refund_mode_content">到期还本利息</string>
     <string name="tv_boole_in_advance_redeem">不支持提前赎回</string>
+    
+    <string name="tv_investment_phone">138***02</string>
+    <string name="tv_investment_date">2016.11.02 12:12</string>
+    <string name="tv_investment_money">￥2000.00</string>
+
+    <!--<string name="tv_"-->
 
     
     
     
     
 
-tv
+
 </resources>

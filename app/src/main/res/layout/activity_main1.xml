@@ -21,5 +21,22 @@
         android:padding="@dimen/space.medium"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:text="Realm Data"/>
+    <!--<Bott-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:padding="@dimen/space.medium"
+        android:layout_marginTop="30dp"
+        android:text="测试kkk"/>
+    <!--<com.ashokvarma.bottomnavigation.BottomNavigationBar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?android:actionBarSize"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/gray_deep">-->
+
+    <!--</com.ashokvarma.bottomnavigation.BottomNavigationBar>-->
 
 </RelativeLayout>

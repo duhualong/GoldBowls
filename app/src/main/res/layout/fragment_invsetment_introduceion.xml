@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space.medium"
     android:background="@color/light_white">
+    <LinearLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,9 +19,8 @@
         android:paddingStart="@dimen/space.medium"
         android:paddingRight="@dimen/space.medium"
         android:paddingEnd="@dimen/space.medium"
-        android:paddingTop="@dimen/space.medium"
         android:paddingBottom="@dimen/space.small"
-        android:layout_marginTop="@dimen/space.medium">
+        >
         <TextView
             android:id="@id/textView2"
             android:layout_width="wrap_content"
@@ -157,7 +163,22 @@
             android:textColor="@color/tint_color"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:text="@string/tv_boole_in_advance_redeem"/>
+
+
     </RelativeLayout>
-
-
 </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/rl">
+        <WebView
+            android:id="@id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+
+
+</RelativeLayout>
+    </RelativeLayout>
