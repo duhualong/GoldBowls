@@ -71,14 +71,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mPopupWindow.setTouchable(true);
         mPopupWindow.setOutsideTouchable(true);
         //封装的方法
-        mPsdView.setOnFinishInput(new OnPasswordInputFinish() {
-            @Override
-            public void inputFinish() {
-                // 输入完成后我们简单显示一下输入的密码
-                // 也就是说——>实现你的交易逻辑什么的在这里写
-                Toast.makeText(MainActivity.this, mPsdView.getStrPassword(),
-                        Toast.LENGTH_SHORT).show();
-            }
+        mPsdView.setOnFinishInput(() -> {
+            // 输入完成后我们简单显示一下输入的密码
+            // 也就是说——>实现你的交易逻辑什么的在这里写
+            Toast.makeText(MainActivity.this, mPsdView.getStrPassword(),
+                    Toast.LENGTH_SHORT).show();
         });
         testButton.setOnClickListener(view1 -> {
 
@@ -91,32 +88,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
         });
         ////封装的方法
         mPsdView.getCancelImageView().setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "返回键",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
-        mPsdView.getForgetTextView().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "跳转到忘记密码的页面！",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+                v -> Toast.makeText(MainActivity.this, "返回键",
+                        Toast.LENGTH_SHORT).show());
+        mPsdView.getForgetTextView().setOnClickListener(view12 -> Toast.makeText(MainActivity.this, "跳转到忘记密码的页面！",
+                Toast.LENGTH_SHORT).show());
 
-        mPopupWindow.setTouchInterceptor(new View.OnTouchListener() {
+        mPopupWindow.setTouchInterceptor((v, event) -> {
 
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            Log.i("mengdd", "onTouch : ");
 
-                Log.i("mengdd", "onTouch : ");
-
-                return false;
-                // 这里如果返回true的话，touch事件将被拦截
-                // 拦截后 PopupWindow的onTouchEvent不被调用，这样点击外部区域无法dismiss
-            }
+            return false;
+            // 这里如果返回true的话，touch事件将被拦截
+            // 拦截后 PopupWindow的onTouchEvent不被调用，这样点击外部区域无法dismiss
         });
         // 如果不设置PopupWindow的背景，无论是点击外部区域还是Back键都无法dismiss弹框
         // 我觉得这里是API的一个bug

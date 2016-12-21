@@ -21,12 +21,8 @@ import rx.Subscription;
 
 /**
  * Base Activity
- * Created by zac on 12/16/15.
  */
 public abstract class BaseActivity extends AppCompatActivity {
-
-  private static final String ACTION_NETWORK_CHANGE = "android.net.conn.CONNECTIVITY_CHANGE";
-  private static final String ACTION_NEW_VERSION = "apk.update.action";
 
   protected abstract int getContentView();
 

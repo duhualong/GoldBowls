@@ -172,6 +172,8 @@
     <item name="tv_investment_money" type="id" />
     <item name="list_investment" type="id" />
     <item name="progress_bar" type="id" />
+    <item name="root_view" type="id" />
+    <item name="btn_next" type="id" />
 
 
 </resources>
