@@ -118,4 +118,6 @@ public abstract class BaseFragment extends Fragment {
       mSubscription.unsubscribe();
     }
   }
+
+
 }

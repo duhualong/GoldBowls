@@ -188,11 +188,18 @@
     <string name="tv_investment_money">￥2000.00</string>
 
     <!--<string name="tv_"-->
+<!--Snackbar-->
+    <string name="input_phone_show">输入的手机号码不能为空！</string>
+    <string name="phone_format_show">输入的手机格式不正确，请仔细核对！</string>
+    <string name="phone_register_show">该手机号已经注册，请登录！</string>
+    <string name="exit_app_show">再按一次退出金饭碗理财</string>
+    <string name="find_passwd_send_countdown">重新发送(%sS)</string>
 
-    
-    
-    
-    
+
+
+
+
+
 
 
 </resources>

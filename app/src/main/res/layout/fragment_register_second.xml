@@ -22,6 +22,7 @@
             android:inputType="text"
             android:hint="@string/et_input_real_name_hint"
             android:textColorHint="@color/gray"
+            android:background="@null"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
             android:maxLength="15"/>
@@ -47,6 +48,7 @@
             android:digits="0123456789xX"
             android:hint="@string/et_input_identity_card_hint"
             android:textColorHint="@color/gray"
+            android:background="@null"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
             android:maxLength="19"/>

@@ -8,5 +8,7 @@ package haowei.computer.goldbowl.util;
 public interface Constants {
     String UID="uid";
     String IS_LOGIN="is_login";
+    long COUNT_UNIT = 1000L;
+    long NUM_COUNTDOWN = 60 * COUNT_UNIT;
 
 }

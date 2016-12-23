@@ -145,6 +145,7 @@
             </RelativeLayout>
 
             <Button
+                android:id="@id/btn_register_success"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height_normal"
                 android:layout_margin="@dimen/space.small"
@@ -156,7 +157,7 @@
             <TextView
                 android:id="@id/tv_skip"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:textColor="#121212"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:text="@string/tv_skip"

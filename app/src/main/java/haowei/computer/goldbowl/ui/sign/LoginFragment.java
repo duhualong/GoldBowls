@@ -1,9 +1,13 @@
 package haowei.computer.goldbowl.ui.sign;
 
+import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.Selection;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -19,7 +23,9 @@ import haowei.computer.goldbowl.util.MyUtils;
  */
 
 public class LoginFragment extends BaseFragment {
+    private static final String ACCOUNT_REGISTER = "account_register";
     private static final String TAG = "LoginFragment";
+    private String account;
     @BindView(R.id.root_view)
     View rootView;
     @BindView(R.id.input_phone)
@@ -35,7 +41,28 @@ public class LoginFragment extends BaseFragment {
 
     @Override
     protected void updateUI() {
+        if (!TextUtils.isEmpty(account)){
+            inputPhone.setText(account);
+        }
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (getArguments() != null) {
+            account = getArguments().getString(ACCOUNT_REGISTER);
+        }
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    public static LoginFragment newInstance(String account) {
+        LoginFragment fragment = new LoginFragment();
+        if (!TextUtils.isEmpty(account)) {
+            Bundle args = new Bundle();
+            args.putString(ACCOUNT_REGISTER, account);
+            fragment.setArguments(args);
+        }
+        return fragment;
     }
 
     @OnClick({R.id.checkbox_password, R.id.btn_login, R.id.tv_forget_password, R.id.tv_register_now})

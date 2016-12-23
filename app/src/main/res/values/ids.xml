@@ -39,6 +39,9 @@
     <item name="tv_skip" type="id" />
     <item name="et_input_code" type="id" />
     <item name="btn_get_code" type="id" />
+    <item name="btn_next" type="id" />
+    <item name="btn_register_success" type="id" />
+
     <!--底部4个控件-->
     <item name="tv_home" type="id" />
     <item name="tv_money" type="id" />
@@ -173,7 +176,6 @@
     <item name="list_investment" type="id" />
     <item name="progress_bar" type="id" />
     <item name="root_view" type="id" />
-    <item name="btn_next" type="id" />
 
 
 </resources>
