@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@id/root_view"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent">
@@ -51,7 +52,7 @@
             android:background="@null"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
-            android:maxLength="19"/>
+            android:maxLength="18"/>
 
     </LinearLayout>
     <LinearLayout

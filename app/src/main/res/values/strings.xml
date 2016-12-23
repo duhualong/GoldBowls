@@ -194,6 +194,9 @@
     <string name="phone_register_show">该手机号已经注册，请登录！</string>
     <string name="exit_app_show">再按一次退出金饭碗理财</string>
     <string name="find_passwd_send_countdown">重新发送(%sS)</string>
+    <string name="name_empty_show">请输入姓名</string>
+    <string name="name_not_standard_show">输入的姓名只能为汉字！</string>‘
+    <string name="name_not_length_show">输入的姓名长度不符合规范！</string>
 
 
 

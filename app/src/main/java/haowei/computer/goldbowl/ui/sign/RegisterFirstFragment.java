@@ -100,17 +100,17 @@ public class RegisterFirstFragment extends BaseFragment {
     private boolean checkedInputPhone(String phone) {
         boolean checked=true;
         if (TextUtils.isEmpty(phone)){
-            MyUtils.showSnackbar(rootView,getResources().getString(R.string.input_phone_show));
+            MyUtils.showSnackbar(rootView,R.string.input_phone_show);
             checked=false;
         }
         if (checked&&!MyUtils.isMobile(phone)){
-            MyUtils.showSnackbar(rootView,getResources().getString(R.string.phone_format_show));
+            MyUtils.showSnackbar(rootView,R.string.phone_format_show);
             checked=false;
         }
         //调接口判断手机号是否注册
         if (checked){
             checked=false;
-            MyUtils.showSnackbar(rootView,getResources().getString(R.string.phone_register_show));
+            MyUtils.showSnackbar(rootView,R.string.phone_register_show);
             LoginFragment loginFragment=LoginFragment.newInstance(phone);
             Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
                 fragmentMgr.beginTransaction()

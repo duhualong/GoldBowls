@@ -30,8 +30,9 @@ public class MyUtils {
         text.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_arrow_right_orange, 0);
     }
     //Snackbar 弹出提示信息
-    public static void showSnackbar(View view,String message){
-        Snackbar.make(view,message,Snackbar.LENGTH_SHORT).show();
+    public static void showSnackbar(View view,int id){
+
+        Snackbar.make(view,view.getResources().getString(id),Snackbar.LENGTH_SHORT).show();
     }
     //  手机号正则表达式
 
