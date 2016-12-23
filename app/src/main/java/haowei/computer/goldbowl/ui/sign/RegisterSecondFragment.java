@@ -45,6 +45,7 @@ public class RegisterSecondFragment extends BaseFragment {
                 break;
             case R.id.bt_submit:
                 //注册第2步
+
                 fragmentMgr.beginTransaction()
                         .addToBackStack(TAG)
                         .replace(R.id.fragment_login_container, new RegisterThirdFragment())
