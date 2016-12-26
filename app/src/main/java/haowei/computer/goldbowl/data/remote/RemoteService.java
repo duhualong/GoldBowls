@@ -25,7 +25,7 @@ import rx.Single;
  */
 @Singleton public interface RemoteService {
 
-
+  String QINIU_CDN = "http://oa4zsx1he.bkt.clouddn.com/";
   String DOMAIN = " http://120.26.56.100/";
 
 

@@ -30,8 +30,8 @@
 
                 <ImageView
                     android:id="@id/img_upload_front"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="234dp"
+                    android:layout_height="150dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/space.medium_normal"
                     android:src="@drawable/ic_identity_card_front" />
@@ -58,8 +58,8 @@
 
                 <ImageView
                     android:id="@id/img_upload_reverse"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="234dp"
+                    android:layout_height="150dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/space.medium_normal"
                     android:src="@drawable/ic_identity_card_front" />
