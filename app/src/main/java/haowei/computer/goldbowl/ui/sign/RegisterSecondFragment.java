@@ -1,8 +1,11 @@
 package haowei.computer.goldbowl.ui.sign;
 
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +23,11 @@ import haowei.computer.goldbowl.util.MyUtils;
 
 public class RegisterSecondFragment extends BaseFragment {
     private static final String TAG = "RegisterSecondFragment";
+    private static final String ACCOUNT ="account" ;
+    private static final String PASSWORD ="password" ;
+    private String mAccount;
+    private String mPassword;
+
     @BindView(R.id.tv_register_title)
     TextView title;
     @BindView(R.id.tv_authentication)
@@ -42,6 +50,26 @@ public class RegisterSecondFragment extends BaseFragment {
         MyUtils.setTextStyle(authentication, getActivity());
 
 
+    }
+//传值
+    public static RegisterSecondFragment newInstance(String account,String password) {
+        RegisterSecondFragment fragment = new RegisterSecondFragment();
+        if (!TextUtils.isEmpty(account)&&!TextUtils.isEmpty(password)) {
+            Bundle args = new Bundle();
+            args.putString(ACCOUNT, account);
+            args.putString(PASSWORD,password);
+            fragment.setArguments(args);
+        }
+        return fragment;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (getArguments() != null) {
+            mAccount = getArguments().getString(ACCOUNT);
+            mPassword=getArguments().getString(PASSWORD);
+        }
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @OnClick({R.id.back_left, R.id.bt_submit})

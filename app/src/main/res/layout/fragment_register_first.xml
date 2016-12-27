@@ -45,7 +45,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/space.very_small"
             android:layout_marginStart="@dimen/space.very_small"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/tint_color"
             android:hint="@string/et_input_code_hint"

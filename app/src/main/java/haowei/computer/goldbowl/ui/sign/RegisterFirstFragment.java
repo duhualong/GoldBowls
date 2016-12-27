@@ -3,10 +3,14 @@ package haowei.computer.goldbowl.ui.sign;
 
 import android.annotation.SuppressLint;
 import android.os.CountDownTimer;
+import android.text.Editable;
+import android.text.InputType;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,6 +20,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.base.BaseFragment;
+import haowei.computer.goldbowl.util.EditTextHintUtils;
+import haowei.computer.goldbowl.util.Encrypt;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
 import rx.Single;
@@ -47,7 +53,13 @@ public class RegisterFirstFragment extends BaseFragment {
     EditText inputPsd;
     @BindView(R.id.input_password_affirm)
     EditText inputAffirmPsd;
-    @BindView(R.id.bt_send_code)Button btnSendCaptcha;
+    @BindView(R.id.bt_send_code)
+    Button btnSendCaptcha;
+    @BindView(R.id.checkbox_password)
+    CheckBox checkBoxPwd;
+    @BindView(R.id.checkbox_password_affirm)
+    CheckBox checkBoxAffPwd;
+
 
     @Override
     protected int getContentView() {
@@ -57,12 +69,32 @@ public class RegisterFirstFragment extends BaseFragment {
     @Override
     protected void updateUI() {
         MyUtils.setTextStyle(inputInfo, getActivity());
+        initUI();
+
+    }
+
+    private void initUI() {
+        EditTextHintUtils.setPasswordErrorHint(inputPsd, getActivity());
+        EditTextHintUtils.setAffPasswordHint(inputAffirmPsd, inputPsd, getActivity());
+//        checkBoxPwd.setOnCheckedChangeListener((compoundButton, b) -> {
+//            if (b){
+//
+//            }
+//
+//        });
+        System.out.println("1111111111111111-----2222222222222");
+        MyUtils.setShowHide(checkBoxPwd, inputPsd);
+        MyUtils.setShowHide(checkBoxAffPwd, inputAffirmPsd);
 
     }
 
     @OnClick({R.id.back_left, R.id.bt_register, R.id.tv_register_two, R.id.checkbox_password, R.id.checkbox_password_affirm, R.id.bt_send_code})
     public void onClick(View view) {
-        String phone= inputPhone.getText().toString();
+        String phone = EditTextHintUtils.getString(inputPhone, getActivity());
+        String password = EditTextHintUtils.getString(inputPsd, getActivity());
+        String affPassword = EditTextHintUtils.getString(inputAffirmPsd, getActivity());
+        String captcha = EditTextHintUtils.getString(inputCode, getActivity());
+
         switch (view.getId()) {
 
             case R.id.back_left:
@@ -70,48 +102,98 @@ public class RegisterFirstFragment extends BaseFragment {
                 break;
             case R.id.bt_send_code:
 
-             boolean result=checkedInputPhone(phone);
-                if (result){
+                boolean result = checkedInputPhone(phone);
+                if (result) {
                     TimeDown();
                 }
 
                 break;
             case R.id.bt_register:
-
-                //注册第2步
-
-                fragmentMgr.beginTransaction()
-                        .addToBackStack(TAG)
-                        .replace(R.id.fragment_login_container, new RegisterSecondFragment())
-                        .commit();
+                //校验输入的内容是否符合要求
+                boolean isChecked = checkedInput(phone, captcha, password, affPassword);
+                if (isChecked) {
+                    //注册第2步
+                    RegisterSecondFragment fragment = RegisterSecondFragment.newInstance(phone, password);
+                    fragmentMgr.beginTransaction()
+                            .addToBackStack(TAG)
+                            .replace(R.id.fragment_login_container, fragment)
+                            .commit();
+                }
                 break;
             case R.id.tv_register_two:
+                //跳转到用户注册协议网页那里
+
 
                 break;
             case R.id.checkbox_password:
+                MyUtils.setShowHide(checkBoxPwd, inputPsd);
 
                 break;
             case R.id.checkbox_password_affirm:
-
+                MyUtils.setShowHide(checkBoxAffPwd, inputAffirmPsd);
                 break;
         }
     }
+
+    private boolean checkedInput(String phone, String captcha, String password, String affPassword) {
+        boolean isResult = true;
+
+        if (TextUtils.isEmpty(phone)) {
+            EditTextHintUtils.showInputError(inputPhone, getActivity(), R.string.input_phone_show);
+            isResult = false;
+        }
+        if (isResult && !MyUtils.isMobile(phone)) {
+            EditTextHintUtils.showInputError(inputPhone, getActivity(), R.string.phone_format_show);
+            isResult = false;
+        }
+        if (isResult && TextUtils.isEmpty(captcha)) {
+            EditTextHintUtils.showInputError(inputCode, getActivity(), R.string.hint_captcha_error);
+            isResult = false;
+        }
+        if (isResult&&captcha.length()<4||captcha.length()>6){
+            EditTextHintUtils.showInputError(inputCode,getActivity(),R.string.hint_captcha_format_error);
+            isResult=false;
+
+        }
+        if (isResult&&TextUtils.isEmpty(password)){
+            MyUtils.showSnackbar(rootView,R.string.input_password_empty_show);
+            isResult=false;
+        }
+        if (isResult&&password.length()>20||password.length()<6){
+            MyUtils.showSnackbar(rootView,R.string.input_password_format_show);
+            isResult=false;
+        }
+        if (isResult&&TextUtils.isEmpty(affPassword)){
+            MyUtils.showSnackbar(rootView,R.string.input_affirm_password_empty_show);
+            isResult=false;
+        }
+        if (isResult&&!affPassword.equals(password)){
+            MyUtils.showSnackbar(rootView,R.string.hint_password_same_twice_error);
+            isResult=false;
+        }
+        //调用接口验证手机号和验证码是否一致
+
+
+        return isResult;
+    }
+
+
     //检验输入的是否是手机号
     private boolean checkedInputPhone(String phone) {
-        boolean checked=true;
-        if (TextUtils.isEmpty(phone)){
-            MyUtils.showSnackbar(rootView,R.string.input_phone_show);
-            checked=false;
+        boolean checked = true;
+        if (TextUtils.isEmpty(phone)) {
+            MyUtils.showSnackbar(rootView, R.string.input_phone_show);
+            checked = false;
         }
-        if (checked&&!MyUtils.isMobile(phone)){
-            MyUtils.showSnackbar(rootView,R.string.phone_format_show);
-            checked=false;
+        if (checked && !MyUtils.isMobile(phone)) {
+            MyUtils.showSnackbar(rootView, R.string.phone_format_show);
+            checked = false;
         }
         //调接口判断手机号是否注册
-        if (checked){
-            checked=false;
-            MyUtils.showSnackbar(rootView,R.string.phone_register_show);
-            LoginFragment loginFragment=LoginFragment.newInstance(phone);
+        if (checked) {
+            checked = false;
+            MyUtils.showSnackbar(rootView, R.string.phone_register_show);
+            LoginFragment loginFragment = LoginFragment.newInstance(phone);
             Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
                 fragmentMgr.beginTransaction()
                         .addToBackStack(TAG)
@@ -122,21 +204,24 @@ public class RegisterFirstFragment extends BaseFragment {
 
 
         }
-    return checked;
+        return checked;
     }
+
     //倒计时
-    private void TimeDown(){
+    private void TimeDown() {
         //倒计时开始
         timer = new CountDownTimer(NUM_COUNTDOWN, COUNT_UNIT) {
-            @Override public void onTick(long l) {
-                String info="重新发送"+l/1000+"S";
+            @Override
+            public void onTick(long l) {
+                String info = "重新发送" + l / 1000 + "S";
                 @SuppressLint("StringFormatMatches") String count = getString(R.string.find_passwd_send_countdown, l / 1000);
-                if(btnSendCaptcha!=null&&!TextUtils.isEmpty(info)) {
+                if (btnSendCaptcha != null && !TextUtils.isEmpty(info)) {
                     btnSendCaptcha.setText(count);
                 }
             }
 
-            @Override public void onFinish() {
+            @Override
+            public void onFinish() {
                 btnSendCaptcha.setText(R.string.btn_send_code);
                 btnSendCaptcha.setEnabled(true);
                 isCounting = false;
@@ -146,7 +231,9 @@ public class RegisterFirstFragment extends BaseFragment {
         isCounting = true;
         btnSendCaptcha.setEnabled(false);
     }
-    @Override public void onDestroyView() {
+
+    @Override
+    public void onDestroyView() {
         super.onDestroyView();
         if (timer != null) {
             timer.cancel();

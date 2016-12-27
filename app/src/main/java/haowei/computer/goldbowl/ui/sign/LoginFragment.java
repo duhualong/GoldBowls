@@ -69,12 +69,13 @@ public class LoginFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.checkbox_password:
-                if (checkPwd.isChecked()){
-                    inputPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                }else {
-                    inputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                }
-                MyUtils.setSelection(inputPassword);
+                MyUtils.setShowHide(checkPwd,inputPassword);
+//                if (checkPwd.isChecked()){
+//                    inputPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+//                }else {
+//                    inputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+//                }
+//                MyUtils.setSelection(inputPassword);
                 break;
             case R.id.btn_login:
 

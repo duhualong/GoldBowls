@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.Selection;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -19,6 +21,15 @@ import haowei.computer.goldbowl.R;
  */
 
 public class MyUtils {
+    //根据boole值设置密码是否显示
+    public static void setShowHide(CheckBox checkBox, EditText editText){
+        if (checkBox.isChecked()){
+            editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        }else {
+            editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        }
+        setSelection(editText);
+    }
     //设置光标在尾部位置
     public static void setSelection(EditText editText){
         Editable etext = editText.getText();
@@ -49,4 +60,5 @@ public class MyUtils {
     public static String getString(EditText editText){
         return editText.getText().toString().trim();
     }
+
 }

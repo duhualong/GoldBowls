@@ -197,6 +197,18 @@
     <string name="name_empty_show">请输入姓名</string>
     <string name="name_not_standard_show">输入的姓名只能为汉字！</string>‘
     <string name="name_not_length_show">输入的姓名长度不符合规范！</string>
+    <string name="register_success_show">注册成功，即将跳转到登录页面！</string>
+    <string name="input_password_empty_show">设置的新密码不能为空！</string>
+    <string name="input_affirm_password_empty_show">设置的确认密码不能为空！</string>
+    <string name="input_password_format_show">设置的密码长度不符合规范！</string>
+
+
+    <!--EditText 提示信息-->
+    <string name="hint_password_length_less_error">设置的密码长度不得少于6位</string>
+    <string name="hint_password_length_long_error">设置的密码长度不得多于20位</string>
+    <string name="hint_password_same_twice_error">两次输入的密码不一致，请重新输入</string>
+    <string name="hint_captcha_error">验证码不能为空！</string>
+    <string name="hint_captcha_format_error">验证码不符合规范</string>
 
 
 

@@ -7,13 +7,16 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +28,7 @@ import com.yalantis.ucrop.UCrop;
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -34,8 +38,10 @@ import haowei.computer.goldbowl.data.remote.HttpClient;
 import haowei.computer.goldbowl.data.remote.RemoteService;
 import haowei.computer.goldbowl.model.post.QiNiuToken;
 import haowei.computer.goldbowl.util.ImageUtils;
+import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.PermissionManager;
 import haowei.computer.goldbowl.util.PhotoUtil;
+import haowei.computer.goldbowl.util.RxUtils;
 import rx.Single;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -45,16 +51,20 @@ import rx.schedulers.Schedulers;
  */
 
 public class RegisterThirdFragment extends BaseFragment {
+    private String account;
+    private String password;
     private static final int REQUEST_GALLERY_PHOTO = 0x01;
     private static final int REQUEST_CAMERA_PERMISSION = 0xa1;
     private static final int REQUEST_CAPTURE_PHOTO = 0x02;
     private static final int REQUEST_CROP_PHOTO = 0x03;
+    private static final String TAG ="RegisterThirdFragment";
     private Uri mPhotoUri;
 
     @BindView(R.id.tv_register_title)TextView title;
     @BindView(R.id.tv_register_success)TextView registerSuccess;
     @BindView(R.id.img_upload_front)ImageView uploadFront;
     @BindView(R.id.img_upload_reverse)ImageView ploadReverse;
+    @BindView(R.id.root_view)View rootView;
     @Override
     protected int getContentView() {
         return R.layout.fragment_register_third;
@@ -66,8 +76,12 @@ public class RegisterThirdFragment extends BaseFragment {
         registerSuccess.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
 
     }
+
+
+
     @OnClick({R.id.back_left,R.id.btn_register_success,R.id.img_upload_front,R.id.img_upload_reverse,R.id.tv_skip})public void onClick(View view){
         switch (view.getId()){
+
             case R.id.back_left:
                 onBackPressed();
                 break;
@@ -82,8 +96,18 @@ public class RegisterThirdFragment extends BaseFragment {
 
                 break;
             case R.id.btn_register_success:
+                //调用注册信息的接口
                 System.out.println("打印"+Math.sqrt(2016));
+                MyUtils.showSnackbar(rootView,R.string.register_success_show);
 
+                LoginFragment loginFragment=LoginFragment.newInstance(account);
+                Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
+                    fragmentMgr.beginTransaction()
+                            .addToBackStack(TAG)
+                            .replace(R.id.fragment_login_container, loginFragment)
+                            .commit();
+
+                });
                 break;
         }
     }
