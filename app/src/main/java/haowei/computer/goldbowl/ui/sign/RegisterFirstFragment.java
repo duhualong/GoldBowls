@@ -2,12 +2,15 @@ package haowei.computer.goldbowl.ui.sign;
 
 
 import android.annotation.SuppressLint;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -35,7 +38,9 @@ import static haowei.computer.goldbowl.util.Constants.NUM_COUNTDOWN;
  */
 
 public class RegisterFirstFragment extends BaseFragment {
+    public static final String PHONE="phone";
     private static final String TAG = "RegisterFirstFragment";
+    private String mPhone;
     private CountDownTimer timer;
     private boolean isCounting;
 
@@ -73,22 +78,33 @@ public class RegisterFirstFragment extends BaseFragment {
 
     }
 
+    public static RegisterFirstFragment newInstance(String phone) {
+        RegisterFirstFragment fragment = new RegisterFirstFragment();
+        if (!TextUtils.isEmpty(phone)) {
+            Bundle args = new Bundle();
+            args.putString(PHONE,phone);
+            fragment.setArguments(args);
+        }
+        return fragment;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (getArguments() != null) {
+            mPhone = getArguments().getString(PHONE);
+        }
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
     private void initUI() {
         EditTextHintUtils.setPasswordErrorHint(inputPsd, getActivity());
         EditTextHintUtils.setAffPasswordHint(inputAffirmPsd, inputPsd, getActivity());
-//        checkBoxPwd.setOnCheckedChangeListener((compoundButton, b) -> {
-//            if (b){
-//
-//            }
-//
-//        });
-        System.out.println("1111111111111111-----2222222222222");
-        MyUtils.setShowHide(checkBoxPwd, inputPsd);
-        MyUtils.setShowHide(checkBoxAffPwd, inputAffirmPsd);
+        MyUtils.setCheckBox(checkBoxPwd,inputPsd);
+        MyUtils.setCheckBox(checkBoxAffPwd,inputAffirmPsd);
 
     }
 
-    @OnClick({R.id.back_left, R.id.bt_register, R.id.tv_register_two, R.id.checkbox_password, R.id.checkbox_password_affirm, R.id.bt_send_code})
+    @OnClick({R.id.back_left, R.id.bt_register, R.id.tv_register_two, R.id.bt_send_code})
     public void onClick(View view) {
         String phone = EditTextHintUtils.getString(inputPhone, getActivity());
         String password = EditTextHintUtils.getString(inputPsd, getActivity());
@@ -125,13 +141,7 @@ public class RegisterFirstFragment extends BaseFragment {
 
 
                 break;
-            case R.id.checkbox_password:
-                MyUtils.setShowHide(checkBoxPwd, inputPsd);
 
-                break;
-            case R.id.checkbox_password_affirm:
-                MyUtils.setShowHide(checkBoxAffPwd, inputAffirmPsd);
-                break;
         }
     }
 
@@ -159,7 +169,7 @@ public class RegisterFirstFragment extends BaseFragment {
             MyUtils.showSnackbar(rootView,R.string.input_password_empty_show);
             isResult=false;
         }
-        if (isResult&&password.length()>20||password.length()<6){
+        if (isResult&&password.length()>20||(password.length()<6&&password.length()>0)){
             MyUtils.showSnackbar(rootView,R.string.input_password_format_show);
             isResult=false;
         }
@@ -189,7 +199,7 @@ public class RegisterFirstFragment extends BaseFragment {
             MyUtils.showSnackbar(rootView, R.string.phone_format_show);
             checked = false;
         }
-        //调接口判断手机号是否注册
+        //调接口判断手机号是否注册，检验是否注册的接口
         if (checked) {
             checked = false;
             MyUtils.showSnackbar(rootView, R.string.phone_register_show);

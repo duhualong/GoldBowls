@@ -8,6 +8,7 @@ import android.text.InputType;
 import android.text.Selection;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,6 +22,19 @@ import haowei.computer.goldbowl.R;
  */
 
 public class MyUtils {
+
+    //对CheckBox状态监听
+    public static void setCheckBox(CheckBox checkBox,EditText editText){
+        checkBox.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b){
+                editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            }else {
+                editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            }
+            setSelection(editText);
+
+        });
+    }
     //根据boole值设置密码是否显示
     public static void setShowHide(CheckBox checkBox, EditText editText){
         if (checkBox.isChecked()){

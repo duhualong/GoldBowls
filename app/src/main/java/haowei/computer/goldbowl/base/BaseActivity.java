@@ -22,6 +22,8 @@ import haowei.computer.goldbowl.data.local.PreferencesHelper;
 import haowei.computer.goldbowl.data.local.UserDao;
 import haowei.computer.goldbowl.data.remote.HttpClient;
 import haowei.computer.goldbowl.data.remote.RemoteService;
+import haowei.computer.goldbowl.ui.sign.LoginActivity;
+import haowei.computer.goldbowl.util.StatusBarUtil;
 import rx.Subscription;
 
 /**
@@ -49,6 +51,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     if (getContentView() != 0) {
       setContentView(getContentView());
     }

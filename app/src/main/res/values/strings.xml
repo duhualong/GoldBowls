@@ -201,6 +201,8 @@
     <string name="input_password_empty_show">设置的新密码不能为空！</string>
     <string name="input_affirm_password_empty_show">设置的确认密码不能为空！</string>
     <string name="input_password_format_show">设置的密码长度不符合规范！</string>
+   <string name="modify_success_password_show">密码设置成功，即将跳转到登录界面！</string>
+    <string name="unregister_phone_show">手机号未注册，即将跳转到注册页面！</string>
 
 
     <!--EditText 提示信息-->

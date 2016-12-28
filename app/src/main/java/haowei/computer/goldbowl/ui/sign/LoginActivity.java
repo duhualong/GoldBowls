@@ -5,6 +5,7 @@ import android.app.Fragment;
 
 import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.base.BaseActivity;
+import haowei.computer.goldbowl.util.StatusBarUtil;
 
 /**
  * Created by Administrator on 2016/12/19.
@@ -15,6 +16,8 @@ public class LoginActivity  extends BaseActivity{
 
     @Override
     protected int getContentView() {
+        //设置顶部图标为黑色
+        StatusBarUtil.StatusBarLightMode(LoginActivity.this);
         return R.layout.activity_login;
     }
 
