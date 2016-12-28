@@ -37,6 +37,7 @@ import haowei.computer.goldbowl.base.BaseFragment;
 import haowei.computer.goldbowl.data.remote.HttpClient;
 import haowei.computer.goldbowl.data.remote.RemoteService;
 import haowei.computer.goldbowl.model.post.QiNiuToken;
+import haowei.computer.goldbowl.test.MainActivity;
 import haowei.computer.goldbowl.util.ImageUtils;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.PermissionManager;
@@ -51,6 +52,18 @@ import rx.schedulers.Schedulers;
  */
 
 public class RegisterThirdFragment extends BaseFragment {
+    public static final String PHONE="phone";
+    public static final String PASSWORD="password";
+    public static final String CAPTCHA="captcha";
+    public static final String NAME="name";
+    public static final String IDENTITY="identity";
+
+    private String mPhone;
+    private String mCaptcha;
+    private String mPassword;
+    private String mName;
+    private String mIdentity;
+
     private String account;
     private String password;
     private static final int REQUEST_GALLERY_PHOTO = 0x01;
@@ -77,7 +90,32 @@ public class RegisterThirdFragment extends BaseFragment {
 
     }
 
+    public static RegisterThirdFragment newInstance(String phone,String captcha,String password, String name,String identity) {
+        RegisterThirdFragment fragment = new RegisterThirdFragment();
+        if (!TextUtils.isEmpty(phone)&&!TextUtils.isEmpty(captcha)&&!TextUtils.isEmpty(password)&&!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(identity)){
+            Bundle args = new Bundle();
+            args.putString(PHONE,phone);
+            args.putString(CAPTCHA,captcha);
+            args.putString(PASSWORD,password);
+            args.putString(NAME,name);
+            args.putString(IDENTITY,identity);
+            fragment.setArguments(args);
+        }
+        return fragment;
+    }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (getArguments() != null) {
+             mPhone = getArguments().getString(PHONE);
+            mCaptcha=getArguments().getString(CAPTCHA);
+            mPassword=getArguments().getString(PASSWORD);
+            mIdentity=getArguments().getString(IDENTITY);
+            mName=getArguments().getString(NAME);
+
+        }
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
 
     @OnClick({R.id.back_left,R.id.btn_register_success,R.id.img_upload_front,R.id.img_upload_reverse,R.id.tv_skip})public void onClick(View view){
         switch (view.getId()){
@@ -93,6 +131,9 @@ public class RegisterThirdFragment extends BaseFragment {
 
                 break;
             case R.id.tv_skip:
+                //提交部分注册信息然后跳转到登录页面
+
+
 
                 break;
             case R.id.btn_register_success:
