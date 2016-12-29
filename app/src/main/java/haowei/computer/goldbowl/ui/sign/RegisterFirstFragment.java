@@ -129,7 +129,7 @@ public class RegisterFirstFragment extends BaseFragment {
                 boolean isChecked = checkedInput(phone, captcha, password, affPassword);
                 if (isChecked) {
                     //注册第2步
-                    RegisterSecondFragment fragment = RegisterSecondFragment.newInstance(phone, password);
+                    RegisterSecondFragment fragment = RegisterSecondFragment.newInstance(phone, password,captcha);
                     fragmentMgr.beginTransaction()
                             .addToBackStack(TAG)
                             .replace(R.id.fragment_login_container, fragment)

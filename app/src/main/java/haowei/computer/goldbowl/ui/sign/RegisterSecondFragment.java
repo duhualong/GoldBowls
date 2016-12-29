@@ -25,6 +25,8 @@ public class RegisterSecondFragment extends BaseFragment {
     private static final String TAG = "RegisterSecondFragment";
     private static final String ACCOUNT ="account" ;
     private static final String PASSWORD ="password" ;
+    private static final String CAPTCHA="captcha";
+    private String mCaptcha;
     private String mAccount;
     private String mPassword;
 
@@ -52,12 +54,13 @@ public class RegisterSecondFragment extends BaseFragment {
 
     }
 //传值
-    public static RegisterSecondFragment newInstance(String account,String password) {
+    public static RegisterSecondFragment newInstance(String account,String password,String captcha) {
         RegisterSecondFragment fragment = new RegisterSecondFragment();
         if (!TextUtils.isEmpty(account)&&!TextUtils.isEmpty(password)) {
             Bundle args = new Bundle();
             args.putString(ACCOUNT, account);
             args.putString(PASSWORD,password);
+            args.putString(CAPTCHA,captcha);
             fragment.setArguments(args);
         }
         return fragment;
@@ -68,6 +71,7 @@ public class RegisterSecondFragment extends BaseFragment {
         if (getArguments() != null) {
             mAccount = getArguments().getString(ACCOUNT);
             mPassword=getArguments().getString(PASSWORD);
+            mCaptcha=getArguments().getString(CAPTCHA);
         }
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -100,9 +104,10 @@ public class RegisterSecondFragment extends BaseFragment {
                     result = EditCheckUtil.IDCardValidate(identity, getActivity());
                     if (result) {
                 //注册第2步
+                        RegisterThirdFragment fragment=RegisterThirdFragment.newInstance(mAccount,mCaptcha,mPassword,name,identity);
                 fragmentMgr.beginTransaction()
                         .addToBackStack(TAG)
-                        .replace(R.id.fragment_login_container, new RegisterThirdFragment())
+                        .replace(R.id.fragment_login_container, fragment)
                         .commit();
                     }
                 }

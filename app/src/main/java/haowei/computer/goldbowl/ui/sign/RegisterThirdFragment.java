@@ -89,7 +89,7 @@ public class RegisterThirdFragment extends BaseFragment {
         registerSuccess.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));
 
     }
-
+//fragment 传递数据
     public static RegisterThirdFragment newInstance(String phone,String captcha,String password, String name,String identity) {
         RegisterThirdFragment fragment = new RegisterThirdFragment();
         if (!TextUtils.isEmpty(phone)&&!TextUtils.isEmpty(captcha)&&!TextUtils.isEmpty(password)&&!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(identity)){
@@ -132,6 +132,8 @@ public class RegisterThirdFragment extends BaseFragment {
                 break;
             case R.id.tv_skip:
                 //提交部分注册信息然后跳转到登录页面
+                showSkipDialog();
+
 
 
 
@@ -152,6 +154,23 @@ public class RegisterThirdFragment extends BaseFragment {
                 break;
         }
     }
+//跳过上传身份证的dialog
+    private void showSkipDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity()).setMessage("是否要跳过身份认证？")
+                .setNegativeButton("否", (dialog, which) -> {
+
+                })
+                .setPositiveButton("是", (dialog, which) -> {
+
+                    //调用提交的接口
+
+                    //  checkPermission();
+                });
+        builder.create().show();
+
+    }
+
+
     //上传图片的权限
     private void checkHeaderPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -282,6 +301,7 @@ public class RegisterThirdFragment extends BaseFragment {
                 .withMaxResultSize(540, 360)
                 .start(context, this, requestCode);
     }
+    //上传照片到七牛
     private void uploadImage(String filePath,ImageView image) {
         System.out.println("打印数据：" + filePath);
         HttpClient client = new HttpClient();
