@@ -2,12 +2,15 @@ package haowei.computer.goldbowl.ui.sign;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.design.widget.Snackbar;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,7 @@ import haowei.computer.goldbowl.util.EditTextHintUtils;
 import haowei.computer.goldbowl.util.Encrypt;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
+import haowei.computer.goldbowl.util.SnackbarUtil;
 import rx.Single;
 
 import static haowei.computer.goldbowl.util.Constants.COUNT_UNIT;
@@ -38,6 +42,8 @@ import static haowei.computer.goldbowl.util.Constants.NUM_COUNTDOWN;
  */
 
 public class RegisterFirstFragment extends BaseFragment {
+    public static int yellow=0xffFFC000;
+
     public static final String PHONE="phone";
     private static final String TAG = "RegisterFirstFragment";
     private String mPhone;
@@ -75,6 +81,7 @@ public class RegisterFirstFragment extends BaseFragment {
     protected void updateUI() {
         MyUtils.setTextStyle(inputInfo, getActivity());
         initUI();
+
 
     }
 
@@ -125,6 +132,7 @@ public class RegisterFirstFragment extends BaseFragment {
 
                 break;
             case R.id.bt_register:
+
                 //校验输入的内容是否符合要求
                 boolean isChecked = checkedInput(phone, captcha, password, affPassword);
                 if (isChecked) {

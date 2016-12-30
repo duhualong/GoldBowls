@@ -1,11 +1,13 @@
 package haowei.computer.goldbowl.util;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.Selection;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -74,5 +76,16 @@ public class MyUtils {
     public static String getString(EditText editText){
         return editText.getText().toString().trim();
     }
+    //Snackbar 弹出框设置样式
+    private static void showSnackBar(View view,int id,Activity activity){
+        Snackbar snackbar=Snackbar.make(view,view.getResources().getString(id),Snackbar.LENGTH_LONG);
+        View view1=snackbar.getView();
+        TextView tv = (TextView) view1.findViewById(R.id.snackbar_text);
+        view1.setBackgroundColor(ContextCompat.getColor(activity, R.color.colorPrimary));
+        tv.setTextColor(Color.BLACK);
+        tv.setGravity(Gravity.CENTER);
+        snackbar.show();
+    }
+
 
 }
