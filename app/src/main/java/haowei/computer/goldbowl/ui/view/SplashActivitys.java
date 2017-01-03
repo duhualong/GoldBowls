@@ -17,6 +17,7 @@ import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.base.BaseActivity;
 import haowei.computer.goldbowl.test.MainActivity;
 import haowei.computer.goldbowl.ui.SplashActivity;
+import haowei.computer.goldbowl.util.MyUtils;
 
 /**
  * Created by Administrator on 2016/12/29.
@@ -43,6 +44,7 @@ public class SplashActivitys extends BaseActivity{
 
     @Override
     protected void updateUI() {
+
 
     }
 

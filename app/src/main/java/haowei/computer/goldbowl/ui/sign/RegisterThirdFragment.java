@@ -155,6 +155,7 @@ public class RegisterThirdFragment extends BaseFragment {
             case R.id.btn_register_success:
                 //调用注册信息的接口
                 System.out.println("打印" + Math.sqrt(2016));
+               // SnackbarUtil.LongSnackbar(rootView,getResources().getString(R.string.register_success_show),SnackbarUtil.black,SnackbarUtil.yellow);
                 MyUtils.showSnackbar(rootView, R.string.register_success_show);
 
                 LoginFragment loginFragment = LoginFragment.newInstance(mPhone);

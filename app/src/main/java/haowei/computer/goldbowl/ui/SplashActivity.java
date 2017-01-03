@@ -19,6 +19,7 @@ import haowei.computer.goldbowl.data.local.PreferencesHelper;
 import haowei.computer.goldbowl.test.MainActivity;
 import haowei.computer.goldbowl.ui.sign.LoginActivity;
 import haowei.computer.goldbowl.util.Constants;
+import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
 import rx.Single;
 
@@ -38,9 +39,12 @@ public class SplashActivity extends BaseActivity{
 
     @Override
     protected void updateUI() {
+        System.out.println("打印sss----------------sss");
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             hideSystemUI();
         }
+
         mProgressBar.setVisibility(View.VISIBLE);
         Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
             mProgressBar.setVisibility(View.GONE);

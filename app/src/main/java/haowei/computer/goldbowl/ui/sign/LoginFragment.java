@@ -1,5 +1,6 @@
 package haowei.computer.goldbowl.ui.sign;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -15,6 +16,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.base.BaseFragment;
+import haowei.computer.goldbowl.ui.view.activity.MainContainerActivity;
 import haowei.computer.goldbowl.util.MyUtils;
 
 /**
@@ -78,7 +80,8 @@ public class LoginFragment extends BaseFragment {
 //                MyUtils.setSelection(inputPassword);
                 break;
             case R.id.btn_login:
-
+                startActivity(new Intent(getActivity(), MainContainerActivity.class));
+                getActivity().finish();
                 break;
             case R.id.tv_forget_password:
                 fragmentMgr.beginTransaction().addToBackStack(TAG)

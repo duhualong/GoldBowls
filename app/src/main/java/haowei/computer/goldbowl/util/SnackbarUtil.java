@@ -27,6 +27,7 @@ public class SnackbarUtil {
     public static  int blue = 0xff2195f3;
     public static  int orange = 0xffffc107;
     public static int yellow=0xffFFC000;
+    public static int black=0xff000000;
 
     /**
      * 短显示Snackbar，自定义颜色

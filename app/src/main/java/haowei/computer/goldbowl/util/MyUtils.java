@@ -87,5 +87,12 @@ public class MyUtils {
         snackbar.show();
     }
 
-
+    /**
+     * 获取手机品牌信息
+     *
+     * @return
+     */
+    public static String getPhoneBrand() {
+        return android.os.Build.BRAND;
+    }
 }
