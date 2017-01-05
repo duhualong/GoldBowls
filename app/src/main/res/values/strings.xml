@@ -212,6 +212,10 @@
     <string name="hint_captcha_error">验证码不能为空！</string>
     <string name="hint_captcha_format_error">验证码不符合规范</string>
 
+    <!--登录的错误信息-->
+    <string name="error_password_empty">输入的密码不能为空！</string>
+    <string name="error_password_format">输入密码的格式不正确！</string>
+
 
 
 <!--Permisssion-->
@@ -223,5 +227,8 @@
     <string name="select">请选择</string>
 
     <string name="splash_info">In fact you really amazing</string>
+
+    <!--dialog-->
+    <string name="login_out_dialog">是否要退出登录？</string>
 
 </resources>

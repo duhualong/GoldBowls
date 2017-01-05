@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.wx.pwd.CheckStrength;
+
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -39,7 +41,7 @@ public class SplashActivity extends BaseActivity{
 
     @Override
     protected void updateUI() {
-        System.out.println("打印sss----------------sss");
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             hideSystemUI();

@@ -9,15 +9,20 @@ import android.text.InputType;
 import android.text.Selection;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.wx.pwd.CheckStrength;
+
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import haowei.computer.goldbowl.R;
+import rx.Single;
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -94,5 +99,43 @@ public class MyUtils {
      */
     public static String getPhoneBrand() {
         return android.os.Build.BRAND;
+    }
+
+    /**检测设置密码的强度
+     *
+     * @param password
+     * @return
+     *  //检测设置的密码强度
+    //        0-3 : [easy]
+    //        4-6 : [midium]
+    //        7-9 : [strong]
+    //        10-12 : [very strong]
+    //        >12 : [extremely strong]
+     */
+
+    public static int checkPassword(String password){
+        return CheckStrength.checkPasswordStrength(password);
+    }
+
+
+
+    /**
+     * 设置是否显示错误信息
+     * @param textView
+     * @param textValue  文字的值
+     *
+     */
+
+
+    public static void  errorShow(TextView textView,int textValue, Button button){
+        textView.setVisibility(View.VISIBLE);
+        textView.setText(textValue);
+        button.setClickable(false);
+        button.setBackgroundResource(R.drawable.bg_round_color_gray_deep);
+        Single.just("").delay(3, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
+            textView.setVisibility(View.GONE);
+            button.setClickable(true);
+            button.setBackgroundResource(R.drawable.bg_round_color_primary);
+        });
     }
 }

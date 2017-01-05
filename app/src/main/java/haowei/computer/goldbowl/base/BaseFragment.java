@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
@@ -48,6 +49,7 @@ public abstract class BaseFragment extends Fragment {
       rootView = inflater.inflate(getContentView(), container, false);
       unbinder = ButterKnife.bind(this, rootView);
 
+
       context = getActivity();
 
       fragmentMgr = getFragmentManager();
@@ -77,6 +79,7 @@ public abstract class BaseFragment extends Fragment {
 
   @Override public void onDestroy() {
     super.onDestroy();
+
     //App.getRefWatcher().watch(this);
   }
 

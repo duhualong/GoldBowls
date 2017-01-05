@@ -99,6 +99,16 @@
             android:background="@drawable/checkbox_style"/>
 
     </LinearLayout>
+    <TextView
+        android:id="@id/input_error_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@color/red_error"
+        android:layout_marginTop="@dimen/space.small"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/space.medium"
+        android:layout_marginRight="@dimen/space.medium"/>
 
     <Button
         android:id="@id/btn_login"

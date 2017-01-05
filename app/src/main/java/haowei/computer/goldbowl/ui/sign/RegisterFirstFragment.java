@@ -5,21 +5,14 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.design.widget.Snackbar;
-import android.text.Editable;
-import android.text.InputType;
 import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -27,10 +20,8 @@ import butterknife.OnClick;
 import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.base.BaseFragment;
 import haowei.computer.goldbowl.util.EditTextHintUtils;
-import haowei.computer.goldbowl.util.Encrypt;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
-import haowei.computer.goldbowl.util.SnackbarUtil;
 import rx.Single;
 
 import static haowei.computer.goldbowl.util.Constants.COUNT_UNIT;
@@ -79,6 +70,7 @@ public class RegisterFirstFragment extends BaseFragment {
 
     @Override
     protected void updateUI() {
+
         MyUtils.setTextStyle(inputInfo, getActivity());
         initUI();
 
@@ -258,4 +250,9 @@ public class RegisterFirstFragment extends BaseFragment {
         }
         isCounting = false;
     }
+
+
+
+
+
 }

@@ -3,6 +3,7 @@
     <!--导航页面-->
     <item name="img_splash" type="id" />
     <!--登陆注册忘记密码-->
+    <item name="input_error_tip" type="id" />
     <item name="fragment_login_container" type="id" />
     <item name="line_input_phone" type="id" />
     <item name="input_phone" type="id" />
@@ -176,6 +177,7 @@
     <item name="list_investment" type="id" />
     <item name="progress_bar" type="id" />
     <item name="root_view" type="id" />
+
 
 
 </resources>
