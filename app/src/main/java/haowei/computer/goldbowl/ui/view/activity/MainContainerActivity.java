@@ -27,12 +27,12 @@ public class MainContainerActivity extends BaseActivity implements ViewPager.OnP
     //默认图标
     int[] navigatorDrawablesNormal = {
             R.drawable.ic_home_default, R.drawable.ic_money_default, R.drawable.ic_code_default,
-           R.drawable.ic_personal_default
+           R.drawable.ic_my_default
     };
     //选中图标
     int[] navigatorDrawablesSelect = {
             R.drawable.ic_home_select , R.drawable.ic_money_select, R.drawable.ic_code_select,
-        R.drawable.ic_personal_select
+        R.drawable.ic_my_select
     };
     @Override
     protected int getContentView() {

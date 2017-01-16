@@ -230,5 +230,8 @@
 
     <!--dialog-->
     <string name="login_out_dialog">是否要退出登录？</string>
+    <string name="call_phone_alert">是否要拨打客服电话？</string>
+    <string name="confirm_dialog">确定</string>
+    <string name="code_popu_show">积分赚的多，商品趣味多</string>
 
 </resources>

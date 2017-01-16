@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@id/root_container"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -9,7 +10,7 @@
       android:id="@id/fragment_container"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginBottom="80dp"
+      android:layout_marginBottom="?android:actionBarSize"
       />
 
   <include layout="@layout/include_bottom"/>

@@ -2,66 +2,72 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    >
+    android:layout_alignParentBottom="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="vertical">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gray_deep"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/white">
-        <TextView
-            android:id="@id/tv_home"
-            android:layout_width="0dp"
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_deep" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_home_default"
-            android:text="@string/tv_home"
-            android:drawablePadding="@dimen/space.small"
-            android:gravity="center"
-            android:padding="@dimen/space.very_small"
-            android:textColor="@color/gray_deep"
-            android:layout_weight="1"/>
-        <TextView
-        android:id="@id/tv_money"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_money_default"
-        android:text="@string/tv_money"
-        android:drawablePadding="@dimen/space.small"
-        android:gravity="center"
-        android:padding="@dimen/space.very_small"
-        android:textColor="@color/gray_deep"
-        android:layout_weight="1"/>
-        <TextView
-            android:id="@id/tv_code"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_code_default"
-            android:text="@string/tv_code"
-            android:drawablePadding="@dimen/space.small"
-            android:gravity="center"
-            android:padding="@dimen/space.very_small"
-            android:textColor="@color/gray_deep"
-            android:layout_weight="1"/>
-        <TextView
-            android:id="@id/tv_my"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/ic_my_default"
-            android:text="@string/tv_my"
-            android:drawablePadding="@dimen/space.small"
-            android:gravity="center"
-            android:padding="@dimen/space.very_small"
-            android:textColor="@color/gray_deep"
-            android:layout_weight="1"/>
-    </LinearLayout>
+            android:layout_marginTop="@dimen/space.very_small"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/tv_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_home_default"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/space.very_small"
+                android:text="@string/tv_home"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/gray_deep" />
+
+            <TextView
+                android:id="@id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_money_default"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/space.very_small"
+                android:text="@string/tv_money"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/gray_deep" />
+
+            <TextView
+                android:id="@id/tv_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_code_default"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/space.very_small"
+                android:text="@string/tv_code"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/gray_deep" />
+
+            <TextView
+                android:id="@id/tv_my"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_my_default"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/space.very_small"
+                android:text="@string/tv_my"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/gray_deep" />
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

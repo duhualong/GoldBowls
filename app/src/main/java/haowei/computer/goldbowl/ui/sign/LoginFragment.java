@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.OnClick;
 import haowei.computer.goldbowl.R;
+import haowei.computer.goldbowl.TestBankActivity;
 import haowei.computer.goldbowl.base.BaseFragment;
 
 import haowei.computer.goldbowl.test.MainActivity;
@@ -25,6 +26,7 @@ import haowei.computer.goldbowl.util.Constants;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
 import rx.Single;
+
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -62,7 +64,8 @@ public class LoginFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         if (getArguments() != null) {
             account = getArguments().getString(ACCOUNT_REGISTER);
         }
@@ -89,8 +92,10 @@ public class LoginFragment extends BaseFragment {
 
                 break;
             case R.id.btn_login:
-                //验证账号密码是否正确
-                boolean result = checkInputContent(mPhone, mPassword);
+               // startActivity(new Intent(getActivity(), TestBankActivity.class));
+              //  验证账号密码是否正确
+               // boolean result = checkInputContent(mPhone, mPassword);
+                boolean result = checkInputContent("18817772486", "12345678");
                 if (result) {
                     startActivity(new Intent(getActivity(), MainContainerActivity.class));
                     getActivity().finish();

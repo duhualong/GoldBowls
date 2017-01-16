@@ -51,10 +51,13 @@ public abstract class BaseActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
+    StatusBarUtil.StatusBarLightMode(this);
     if (getContentView() != 0) {
       setContentView(getContentView());
     }
+    // 设置状态栏黑色字体图标，
+    // * 适配4.4以上版本MIUIV、Flyme和6.0以上版本其他Android
+
     ButterKnife.bind(this);
 
     App.get(this).getApplicationComponent().inject(this);

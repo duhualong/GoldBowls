@@ -82,4 +82,7 @@ public class PermissionManager {
   @TargetApi(Build.VERSION_CODES.M) public static void requestPhoneCall(Fragment fragment, int requestCode) {
     fragment.requestPermissions(new String[] { Manifest.permission.CALL_PHONE }, requestCode);
   }
+  @TargetApi(Build.VERSION_CODES.M) public static void requestPhonesCall(android.support.v4.app.Fragment fragment, int requestCode) {
+    fragment.requestPermissions(new String[] { Manifest.permission.CALL_PHONE }, requestCode);
+  }
 }

@@ -10,8 +10,16 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+
     <application
         android:name=".base.App"
         android:allowBackup="true"
@@ -27,6 +35,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"/>
+        <activity android:name="io.card.payment.DataEntryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".TestBankActivity"/>
         <activity android:name=".ui.sign.LoginActivity"
             android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
@@ -42,6 +55,10 @@
         <activity android:name=".ui.view.activity.MainContainerActivity"
             android:screenOrientation="portrait"
             />
+
+
+        <!--扫描信用卡的第三库-->
+        <activity android:name=".test.MyScanActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-1.0.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.yuyh.bankcardformat/library/1.0.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.yuyh.bankcardformat/library/1.0.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yuyh.bankcardformat/library/1.0.2/a1691d63c057da539e1b80776b0231d30c5392ff/library-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
