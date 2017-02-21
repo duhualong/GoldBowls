@@ -233,5 +233,15 @@
     <string name="call_phone_alert">是否要拨打客服电话？</string>
     <string name="confirm_dialog">确定</string>
     <string name="code_popu_show">积分赚的多，商品趣味多</string>
+    
+    <!--home-->
+    <string name="tv_investment">投资理财</string>
+    <string name="tv_share_gift">分享送礼</string>
+    <string name="tv_ensure_safe">保障无忧</string>
+    <string name="tv_home_experience">体验宝</string>
+    <string name="btn_home_investment_less_limit">100元起投 到期还息付利</string>
+    <string name="tv_home_investment_time_count_down">投资倒计时 3天20时25分</string>
+    
+    
 
 </resources>

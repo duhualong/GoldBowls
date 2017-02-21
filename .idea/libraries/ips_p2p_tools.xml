@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ips-p2p-tools">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/ips-p2p-tools.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

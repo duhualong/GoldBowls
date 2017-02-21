@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import haowei.computer.goldbowl.R;
+import haowei.computer.goldbowl.WebViewActivity;
 import haowei.computer.goldbowl.base.BaseActivity;
 import haowei.computer.goldbowl.data.local.PreferencesHelper;
 import haowei.computer.goldbowl.test.MainActivity;
@@ -54,7 +55,8 @@ public class SplashActivity extends BaseActivity{
             if (mPrefsHelper.getPrefs().getBoolean(Constants.IS_LOGIN,false)){
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
             }else {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+                startActivity(new Intent(SplashActivity.this, WebViewActivity.class));
+               // startActivity(new Intent(SplashActivity.this, LoginActivity.class));
             }
             SplashActivity.this.finish();
         });
