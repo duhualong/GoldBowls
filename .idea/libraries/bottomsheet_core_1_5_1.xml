@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="bottomsheet-core-1.5.1">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.flipboard/bottomsheet-core/1.5.1/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.flipboard/bottomsheet-core/1.5.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f7101645040a30f00f469a1ad6805d066809b8ff/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/f7101645040a30f00f469a1ad6805d066809b8ff/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

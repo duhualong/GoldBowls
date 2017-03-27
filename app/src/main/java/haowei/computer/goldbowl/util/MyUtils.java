@@ -1,12 +1,14 @@
 package haowei.computer.goldbowl.util;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.Selection;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import haowei.computer.goldbowl.R;
+import haowei.computer.goldbowl.base.App;
 import rx.Single;
 
 /**
@@ -137,5 +140,18 @@ public class MyUtils {
             button.setClickable(true);
             button.setBackgroundResource(R.drawable.bg_round_color_primary);
         });
+    }
+
+    //获取当前时间的时间戳
+    public static String newTimeToStamp(){
+        long time=System.currentTimeMillis()/1000;
+        String str=String.valueOf(time);
+//        if (!TextUtils.isEmpty(str)) {
+//            SharedPreferences.Editor editor = App.getPrefsHelper().edit();
+//            editor.putString(Constants.TIME, str);
+//            editor.apply();
+//        }
+
+        return str;
     }
 }

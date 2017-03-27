@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,17 +14,33 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.gson.JsonObject;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import haowei.computer.goldbowl.R;
+import haowei.computer.goldbowl.base.App;
 import haowei.computer.goldbowl.base.BaseFragment;
+import haowei.computer.goldbowl.core.ActionCallbackListener;
+import haowei.computer.goldbowl.model.ApiResponse;
+import haowei.computer.goldbowl.model.request.RegisterCaptcha;
+import haowei.computer.goldbowl.util.Constant;
+import haowei.computer.goldbowl.util.Constants;
 import haowei.computer.goldbowl.util.EditTextHintUtils;
+import haowei.computer.goldbowl.util.Encrypt;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
 import rx.Single;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
+import static haowei.computer.goldbowl.util.Constants.*;
 import static haowei.computer.goldbowl.util.Constants.COUNT_UNIT;
 import static haowei.computer.goldbowl.util.Constants.NUM_COUNTDOWN;
 
@@ -117,8 +134,29 @@ public class RegisterFirstFragment extends BaseFragment {
                 break;
             case R.id.bt_send_code:
 
+
                 boolean result = checkedInputPhone(phone);
                 if (result) {
+                    try {
+                        App.getAppAction().registerCaptcha(phone, new ActionCallbackListener<ApiResponse>() {
+                            @Override
+                            public void onActionSuccess(ApiResponse data) {
+                                System.out.println("打印成功：2222");
+
+
+                            }
+
+                            @Override
+                            public void onActionFailure(int errorCode, String message) {
+                                System.out.println("打印失败：1111111");
+
+                            }
+                        });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
                     TimeDown();
                 }
 
@@ -200,20 +238,20 @@ public class RegisterFirstFragment extends BaseFragment {
             checked = false;
         }
         //调接口判断手机号是否注册，检验是否注册的接口
-        if (checked) {
-            checked = false;
-            MyUtils.showSnackbar(rootView, R.string.phone_register_show);
-            LoginFragment loginFragment = LoginFragment.newInstance(phone);
-            Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
-                fragmentMgr.beginTransaction()
-                        .addToBackStack(TAG)
-                        .replace(R.id.fragment_login_container, loginFragment)
-                        .commit();
-
-            });
-
-
-        }
+//        if (checked) {
+//
+//            MyUtils.showSnackbar(rootView, R.string.phone_register_show);
+//            LoginFragment loginFragment = LoginFragment.newInstance(phone);
+//            Single.just("").delay(2, TimeUnit.SECONDS).compose(RxUtils.applySchedulers()).subscribe(s -> {
+//                fragmentMgr.beginTransaction()
+//                        .addToBackStack(TAG)
+//                        .replace(R.id.fragment_login_container, loginFragment)
+//                        .commit();
+//
+//            });
+//
+//
+//        }
         return checked;
     }
 

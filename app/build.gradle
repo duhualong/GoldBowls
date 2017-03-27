@@ -98,4 +98,8 @@ dependencies {
     //刷新页面布局的库
     compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
     compile files('libs/ips-p2p-tools.jar')
+
+
+    compile files('libs/fastjson-1.1.48.android.jar')
+
 }

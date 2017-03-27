@@ -3,6 +3,7 @@ package haowei.computer.goldbowl.base;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.facebook.drawee.backends.pipeline.BuildConfig;
 import com.facebook.drawee.backends.pipeline.Fresco;
@@ -12,6 +13,8 @@ import com.squareup.leakcanary.RefWatcher;
 
 import java.util.Stack;
 
+import haowei.computer.goldbowl.core.AppAction;
+import haowei.computer.goldbowl.core.AppActionImpl;
 import haowei.computer.goldbowl.data.realm.RealmController;
 import haowei.computer.goldbowl.di.component.ApplicationComponent;
 import haowei.computer.goldbowl.di.component.DaggerApplicationComponent;
@@ -19,12 +22,16 @@ import haowei.computer.goldbowl.di.module.ApplicationModule;
 
 
 public class App extends Application {
+  public static final String PREFS_FILE_NAME = "jfw_prefs_file";
 
   private ApplicationComponent mApplicationComponent;
   private static Application sApplicationContext;
+  private static AppAction mAppAction;
   private static RefWatcher sRefWatcher;
   private static Stack<Activity> sActivityStack;
   private static RealmController realmController;
+  private static SharedPreferences prefsHelper;
+
 
 
   public static App get(Context context) {
@@ -38,7 +45,8 @@ public class App extends Application {
     mApplicationComponent.inject(this);
     Stetho.initializeWithDefaults(this);
     sApplicationContext = this;
-
+    mAppAction=new AppActionImpl();
+    prefsHelper = getSharedPreferences(PREFS_FILE_NAME, MODE_PRIVATE);
     sActivityStack = new Stack<>();
     realmController=new RealmController(getApplicationContext());
     // Facebook toolchain
@@ -82,4 +90,11 @@ public class App extends Application {
       }
     }
   }
+  public static SharedPreferences getPrefsHelper() {
+    return prefsHelper;
+  }
+  public static AppAction getAppAction() {
+    return mAppAction;
+  }
+
 }

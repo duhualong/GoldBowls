@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="relinker-1.2.1">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.1/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.getkeepsafe.relinker/relinker/1.2.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/c5b7e9ceca7dc74c882db09bd0c0d3e1f0e241db/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/c5b7e9ceca7dc74c882db09bd0c0d3e1f0e241db/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -19,6 +19,7 @@ import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.TestBankActivity;
 import haowei.computer.goldbowl.base.BaseFragment;
 
+import haowei.computer.goldbowl.data.remote.HttpClient;
 import haowei.computer.goldbowl.test.MainActivity;
 import haowei.computer.goldbowl.ui.SplashActivity;
 import haowei.computer.goldbowl.ui.view.activity.MainContainerActivity;
@@ -92,6 +93,7 @@ public class LoginFragment extends BaseFragment {
 
                 break;
             case R.id.btn_login:
+
                // startActivity(new Intent(getActivity(), TestBankActivity.class));
               //  验证账号密码是否正确
                // boolean result = checkInputContent(mPhone, mPassword);

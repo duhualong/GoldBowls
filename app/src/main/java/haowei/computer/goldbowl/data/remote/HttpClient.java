@@ -42,21 +42,16 @@ import rx.SingleSubscriber;
 
 
   public Single<Response> getData(String url) {
-    return Single.create(new Single.OnSubscribe<Response>() {
+    return Single.create((Single.OnSubscribe<Response>) subscriber -> getData(url, new Callback() {
       @Override
-      public void call(SingleSubscriber<? super Response> subscriber) {
-        getData(url, new Callback() {
-          @Override
-          public void onFailure(Call call, IOException e) {
-            subscriber.onError(e);
-          }
-
-          @Override
-          public void onResponse(Call call, Response response) throws IOException {
-            subscriber.onSuccess(response);
-          }
-        });
+      public void onFailure(Call call, IOException e) {
+        subscriber.onError(e);
       }
-    }).compose(RxUtils.applySchedulers());
+
+      @Override
+      public void onResponse(Call call, Response response) throws IOException {
+        subscriber.onSuccess(response);
+      }
+    })).compose(RxUtils.applySchedulers());
   }
 }

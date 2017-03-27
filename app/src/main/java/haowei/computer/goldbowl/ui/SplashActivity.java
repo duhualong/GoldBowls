@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 
 import com.wx.pwd.CheckStrength;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -19,11 +20,16 @@ import haowei.computer.goldbowl.R;
 import haowei.computer.goldbowl.WebViewActivity;
 import haowei.computer.goldbowl.base.BaseActivity;
 import haowei.computer.goldbowl.data.local.PreferencesHelper;
+import haowei.computer.goldbowl.data.remote.HttpClient;
 import haowei.computer.goldbowl.test.MainActivity;
 import haowei.computer.goldbowl.ui.sign.LoginActivity;
 import haowei.computer.goldbowl.util.Constants;
+import haowei.computer.goldbowl.util.Encrypt;
 import haowei.computer.goldbowl.util.MyUtils;
 import haowei.computer.goldbowl.util.RxUtils;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import rx.Single;
 
 /**
@@ -44,6 +50,12 @@ public class SplashActivity extends BaseActivity{
     protected void updateUI() {
 
 
+        System.out.println("时间戳："+MyUtils.newTimeToStamp());
+        System.out.println("密文："+Encrypt.md5("14891278881475454521225445221254411226554121881777248612345620170212_api.jfwlicai.com_chuangyankeji"));
+
+
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             hideSystemUI();
         }
@@ -55,8 +67,7 @@ public class SplashActivity extends BaseActivity{
             if (mPrefsHelper.getPrefs().getBoolean(Constants.IS_LOGIN,false)){
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
             }else {
-                startActivity(new Intent(SplashActivity.this, WebViewActivity.class));
-               // startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+               startActivity(new Intent(SplashActivity.this, LoginActivity.class));
             }
             SplashActivity.this.finish();
         });
